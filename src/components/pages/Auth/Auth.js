@@ -5,10 +5,11 @@ import 'firebase/auth';
 import './Auth.scss';
 
 class Auth extends React.Component {
+
   loginClickEvent = (e) => {
     e.preventDefault();
     const provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().sighInWithPopup(provider);
+    firebase.auth().signInWithPopup(provider);
   }
 
   render() {
