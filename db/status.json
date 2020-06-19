@@ -1,0 +1,26 @@
+{
+  "happy": {
+    "color": "#7ec8cc"
+  },
+  "sad": {
+    "color": "#CDDAF0"
+  },
+  "angry": {
+    "color": "#ffa1a1"
+  },
+  "depressed": {
+    "color": "#ffd3b6"
+  },
+  "lonely": {
+    "color": "#dcedc1"
+  },
+  "hopeless": {
+    "color": "#dddddd"
+  },
+  "scared": {
+    "color": "#e4dcf1"
+  },
+  "stressed": {
+    "color": "#FBFEBE"
+  }
+}
