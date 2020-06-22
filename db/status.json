@@ -1,0 +1,34 @@
+{
+  "status1": {
+    "status": "happy",
+    "color": "#7ec8cc"
+  },
+  "status2": {
+    "status": "happy",
+    "color": "#CDDAF0"
+  },
+  "status3": {
+    "status": "happy",
+    "color": "#ffa1a1"
+  },
+  "status4": {
+    "status": "happy",
+    "color": "#ffd3b6"
+  },
+  "status5": {
+    "status": "happy",
+    "color": "#dcedc1"
+  },
+  "status6": {
+    "status": "happy",
+    "color": "#dddddd"
+  },
+  "status7": {
+    "status": "happy",
+    "color": "#e4dcf1"
+  },
+  "status8": {
+    "status": "happy",
+    "color": "#FBFEBE"
+  }
+}
