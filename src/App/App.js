@@ -13,8 +13,9 @@ import './App.scss';
 
 import Auth from '../components/pages/Auth/Auth';
 import Home from '../components/pages/Home/Home';
-import SingleView from '../components/pages/SingleView/SingleView';
 import JournalEntry from '../components/pages/JournalEntry/JournalEntry';
+import MyNavbar from '../components/shared/MyNavbar/MyNavbar';
+import SingleView from '../components/pages/SingleView/SingleView';
 
 import fbconnection from '../helpers/data/connection';
 
@@ -59,6 +60,7 @@ class App extends React.Component {
       <div className="App">
         <BrowserRouter>
           <React.Fragment>
+            <MyNavbar authed={authed}/>
             <div className="container">
               <div className="row">
                  <Switch>
