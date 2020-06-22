@@ -1,5 +1,5 @@
 import React from 'react';
-import JournalCard from 'react';
+import JournalCard from '../../shared/JournalCard/JournalCard';
 
 class Home extends React.Component {
   render() {
