@@ -5,8 +5,8 @@ const entryShape = PropTypes.shape({
   date: PropTypes.string.isRequired,
   status: PropTypes.string.isRequired,
   comments: PropTypes.string.isRequired,
-  likeQuotes: PropTypes.string.isRequired,
+  likeQuotes: PropTypes.string,
   uid: PropTypes.string.isRequired,
 });
 
-export default entryShape;
+export default { entryShape };

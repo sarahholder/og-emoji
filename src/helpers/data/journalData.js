@@ -1,0 +1,24 @@
+import axios from 'axios';
+import firebaseConfig from '../apiKeys.json';
+
+const baseUrl = firebaseConfig.firebaseKeys.databaseURL;
+
+const getJournalsByUid = (uid) => new Promise((resolve, reject) => {
+  axios.get(`${baseUrl}/journal.json?orderBy="uid"&equalTo="${uid}"`)
+    .then((response) => {
+      const fbJournals = response.data;
+      const journals = [];
+      if (fbJournals) {
+        Object.keys(fbJournals).forEach((fbId) => {
+          fbJournals[fbId].id = fbId;
+          journals.push(fbJournals[fbId]);
+        });
+      }
+      resolve(journals);
+    })
+    .catch((err) => reject(err));
+});
+
+const getSingleEntry = (journalId) => axios.get(`${baseUrl}/journal/${journalId}.json`);
+
+export default { getJournalsByUid, getSingleEntry };
