@@ -10,7 +10,7 @@ class JournalCard extends React.Component {
 
   render() {
     const { journalEntry } = this.props;
-    const singleLink = `/journalentry/${journalEntry.id}`;
+    const singleLink = `/singleview/${journalEntry.id}`;
 
     return (
       <div>

@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 
 import journalData from '../../../helpers/data/journalData';
 
@@ -17,7 +16,6 @@ class SingleView extends React.Component {
 
     render() {
       const { journalEntry } = this.state;
-      // const { journalId } = this.props.match.params;
 
       return (
             <div>
