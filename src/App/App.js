@@ -61,7 +61,7 @@ class App extends React.Component {
         <BrowserRouter>
           <React.Fragment>
             <MyNavbar authed={authed}/>
-            <div className="container">
+            <div className="container d-flex flex-wrap mx-auto justify-content-center">
               <div className="row">
                  <Switch>
                   <PrivateRoute path='/home' component={Home} authed={authed} />

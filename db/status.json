@@ -1,34 +1,34 @@
 {
   "status1": {
-    "status": "happy",
+    "name": "happy",
     "color": "#7ec8cc"
   },
   "status2": {
-    "status": "happy",
+    "name": "sad",
     "color": "#CDDAF0"
   },
   "status3": {
-    "status": "happy",
+    "name": "angry",
     "color": "#ffa1a1"
   },
   "status4": {
-    "status": "happy",
+    "name": "depressed",
     "color": "#ffd3b6"
   },
   "status5": {
-    "status": "happy",
+    "name": "lonely",
     "color": "#dcedc1"
   },
   "status6": {
-    "status": "happy",
+    "name": "hopeless",
     "color": "#dddddd"
   },
   "status7": {
-    "status": "happy",
+    "name": "scared",
     "color": "#e4dcf1"
   },
   "status8": {
-    "status": "happy",
+    "name": "stressed",
     "color": "#FBFEBE"
   }
 }

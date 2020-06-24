@@ -2,281 +2,281 @@
   "quote1": {
     "quote": "The true secret of happiness lies in the taking a genuine interest in all the details of daily life.",
     "author": "William Morris",
-    "statusId": "happy"
+    "statusId": "status1"
   },
   "quote2": {
     "quote": "If you want happiness for an hour, take a nap. If you want happiness for a day, go fishing. If you want happiness for a year, inherit a fortune. If you want happiness for a lifetime, help someone else.”",
     "author": "William Morris",
-    "statusId": "happy"
+    "statusId": "status1"
   },
   "quote3": {
     "quote": "Happiness is not a goal; it is a by-product.",
     "author": "Eleanor Roosevelt",
-    "statusId": "happy"
+    "statusId": "status1"
   },
   "quote4": {
     "quote": "Happiness lies in the joy of achievement and the thrill of creative effort.",
     "author": "Franklin D. Roosevelt",
-    "statusId": "happy"
+    "statusId": "status1"
   },
   "quote5": {
     "quote": "Happiness is a form of courage.",
     "author": "Holbrook Jackson",
-    "statusId": "happy"
+    "statusId": "status1"
   },
   "quote6": {
     "quote": "Happiness is not a state to arrive at, but a manner of traveling.",
     "author": "Margaret Lee Runbeck",
-    "statusId": "happy"
+    "statusId": "status1"
   },
   "quote7": {
     "quote": "Sanity and happiness are an impossible combination.",
     "author": "Mark Twain",
-    "statusId": "happy"
+    "statusId": "status1"
   },
   "quote8": {
     "quote": "Sadness flies away on the wings of time.",
     "author": "Jean de La Fontaine",
-    "statusId": "sad"
+    "statusId": "status2"
   },
   "quote9": {
     "quote": "Tears are words that need to be written.",
     "author": "Paulo Coelho",
-    "statusId": "sad"
+    "statusId": "status2"
   },
   "quote10": {
     "quote": "Experiencing sadness and anger can make you feel more creative, and by being creative you can get beyond your pain or negativity.",
     "author": "Yoko Ono",
-    "statusId": "sad"
+    "statusId": "status2"
   },
   "quote11": {
     "quote": "Some days are just bad days, that’s all. You have to experience sadness to know happiness, and I remind myself that not every day is going to be a good day, that’s just the way it is!",
     "author": "Dita Von Teese",
-    "statusId": "sad"
+    "statusId": "status2"
   },
   "quote12": {
     "quote": "One must not let oneself be overwhelmed by sadness.",
     "author": "Jackie Kennedy",
-    "statusId": "sad"
+    "statusId": "status2"
   },
   "quote13": {
     "quote": "I don't mind going from sadness to comedy in a split-second or mixing the two up.",
     "author": "Taika Waititi",
-    "statusId": "sad"
+    "statusId": "status2"
   },
   "quote14": {
     "quote": "There are two things a person should never be angry at, what they can help, and what they cannot.",
     "author": "Plato",
-    "statusId": "anger"
+    "statusId": "status3"
   },
   "quote15": {
     "quote": "For every minute you remain angry, you give up sixty seconds of peace of mind.",
     "author": "Ralph Waldo Emerson",
-    "statusId": "angry"
+    "statusId": "status3"
   },
   "quote16": {
     "quote": "Get mad, then get over it.",
     "author": "Colin Powell",
-    "statusId": "angry"
+    "statusId": "status3"
   },
   "quote17": {
     "quote": "Anger is never without a reason, but seldom with a good one.",
     "author": "Benjamin Franklin",
-    "statusId": "angry"
+    "statusId": "status3"
   },
   "quote18": {
     "quote": "There's nothing wrong with anger provided you use it constructively.",
     "author": "Wayne Dyer",
-    "statusId": "angry"
+    "statusId": "status3"
   },
   "quote19": {
     "quote": "You will not be punished for your anger, you will be punished by your anger.",
     "author": "Buddha",
-    "statusId": "angry"
+    "statusId": "status3"
   },
   "quote20": {
     "quote": "To be angry is to revenge the faults of others on ourselves.",
     "author": "Alexander Pope",
-    "statusId": "angry"
+    "statusId": "status3"
   },
   "quote21": {
     "quote": "I have sadness in me. I have anger in me. I have heartbreak in me.",
     "author": "Ellen DeGeneres",
-    "statusId": "angry"
+    "statusId": "status3"
   },
   "quote22": {
     "quote": "Depression is the most unpleasant thing I have ever experienced. . . . It is that absence of being able to envisage that you will ever be cheerful again. The absence of hope. That very deadened feeling, which is so very different from feeling sad. Sad hurts but it’s a healthy feeling. It is a necessary thing to feel. Depression is very different.",
     "author": "JK Rowling",
-    "statusId": "depressed"
+    "statusId": "status4"
   },
   "quote23": {
     "quote": "That terrible mood of depression of whether it's any good or not is what is known as The Artist's Reward.",
     "author": "Ernest Hemingway",
-    "statusId": "depressed"
+    "statusId": "status4"
   },
   "quote24": {
     "quote": "I found that with depression, one of the most important things you could realise is that you're not alone.",
     "author": "Dwayne Johnson",
-    "statusId": "depressed"
+    "statusId": "status4"
   },
   "quote25": {
     "quote": "You largely constructed your depression. It wasn't given to you. Therefore, you can deconstruct it.",
     "author": "Albert Ellis",
-    "statusId": "depressed"
+    "statusId": "status4"
   },
   "quote26": {
     "quote": "When I'm not working on something, I seem to go through periods of depression. It helps to keep busy.",
     "author": "Gene Wilder",
-    "statusId": "depressed"
+    "statusId": "status4"
   },
   "quote27": {
     "quote": "Noble deeds and hot baths are the best cures for depression",
     "author": "Dodie Smith",
-    "statusId": "depressed"
+    "statusId": "status4"
   },
   "quote28": {
     "quote": "It does not mean you're broken to have depression and anxiety. I would encourage you to speak out. Don't hold it inside. Talk to friends. Talk to parents. If it's available, go to a therapist.",
     "author": "Dan Reynolds",
-    "statusId": "depressed"
+    "statusId": "status4"
   },
   "quote29": {
     "quote": "The best way to cheer yourself up is to try to cheer somebody else up.",
     "author": "Mark Twain",
-    "statusId": "lonely"
+    "statusId": "status5"
   },
   "quote30": {
     "quote": "Always give a word or sign of salute when meeting or passing a friend, or even a stranger, if in a lonely place.",
     "author": "Tecumseh",
-    "statusId": "lonely"
+    "statusId": "status5"
   },
   "quote31": {
     "quote": "The lonely become either thoughtful or empty.",
     "author": "Mason Cooley",
-    "statusId": "lonely"
+    "statusId": "status5"
   },
   "quote32": {
     "quote": "The time you feel lonely is the time you most need to be by yourself.",
     "author": "Douglas Coupland",
-    "statusId": "lonely"
+    "statusId": "status5"
   },
   "quote33": {
     "quote": "A lonely day is God’s way of saying that he wants to spend some quality time with you..",
     "author": "Criss Jami",
-    "statusId": "lonely"
+    "statusId": "status5"
   },
   "quote34": {
     "quote": "If you are never alone, you cannot know yourself.",
     "author": "Paulo Coelho",
-    "statusId": "lonely"
+    "statusId": "status5"
   },
   "quote35": {
     "quote": "There is no such thing as a hopeless situation. Every single circumstance of your life can change!",
     "author": "Rhonda Byrne",
-    "statusId": "hopeless"
+    "statusId": "status6"
   },
   "quote36": {
     "quote": "Although the world is full of suffering, it is also full of the overcoming of it.",
     "author": "Helen Keller",
-    "statusId": "hopeless"
+    "statusId": "status6"
   },    
   "quote37": {
     "quote": "What the caterpillar calls the end of the world, the master calls a butterfly.",
     "author": "Richard Bach",
-    "statusId": "hopeless"
+    "statusId": "status6"
   },
   "quote38": {
     "quote": "Start by doing what’s necessary; then do what’s possible; and suddenly you are doing the impossible.",
     "author": "St. Francis of Assisi",
-    "statusId": "hopeless"
+    "statusId": "status6"
   },
   "quote39": {
     "quote": "If you are in a bad mood go for a walk. If you are still in a bad mood go for another walk.",
     "author": "Hippocrates",
-    "statusId": "hopeless"
+    "statusId": "status6"
   },
   "quote40": {
     "quote": "Nothing is impossible; the word itself says I’m possible!",
     "author": "Audrey Hepburn",
-    "statusId": "hopeless"
+    "statusId": "status6"
   },
   "quote41": {
     "quote": "Curiosity will conquer fear even more than bravery will.",
     "author": "James Stephens",
-    "statusId": "scared"
+    "statusId": "status7"
   },
   "quote42": {
     "quote": "We are more often frightened than hurt; and we suffer more from imagination than from reality.",
     "author": "Seneca",
-    "statusId": "scared"
+    "statusId": "status7"
   },
   "quote43": {
     "quote": "Laughter is poison to fear.",
     "author": "George R.R. Martin",
-    "statusId": "scared"
+    "statusId": "status7"
   },
   "quote44": {
     "quote": "Fear is only as deep as the mind allows.",
     "author": "Japanese Proverb",
-    "statusId": "scared"
+    "statusId": "status7"
   },
   "quote45": {
     "quote": "Avoiding danger is no safer in the long run than outright exposure. The fearful are caught as often as the bold.",
     "author": "Helen Keller",
-    "statusId": "scared"
+    "statusId": "status7"
   },
   "quote46": {
     "quote": "I have learned over the years that when one’s mind is made up, this diminishes fear; knowing what must be done does away with fear.",
     "author": "Rosa Parks",
-    "statusId": "scared"
+    "statusId": "status7"
   },
   "quote47": {
     "quote": "The cave you fear to enter holds the treasure you seek.",
     "author": " Joseph Campbell",
-    "statusId": "scared"
+    "statusId": "status7"
   },
   "quote48": {
     "quote": "I learned that courage was not the absence of fear, but the triumph over it. The brave man is not he who does not feel afraid, but he who conquers that fear.",
     "author": "Nelson Mandela",
-    "statusId": "scared"
+    "statusId": "status7"
   },
   "quote49": {
     "quote": "The time to relax is when you don't have time for it.",
     "author": "Sydney J. Harris",
-    "statusId": "stressed"
+    "statusId": "status8"
   },
   "quote50": {
     "quote": "Much of the stress that people feel doesn't come from having too much to do. It comes from not finishing what they've started.",
     "author": "David Allen",
-    "statusId": "stressed"
+    "statusId": "status8"
   },
   "quote51": {
     "quote": "In times of great stress or adversity, it's always best to keep busy, to plow your anger and your energy into something positive.",
     "author": "Lee Iacocca",
-    "statusId": "stressed"
+    "statusId": "status8"
   },
   "quote52": {
     "quote": "Doing something that is productive is a great way to alleviate emotional stress. Get your mind doing something that is productive.",
     "author": "Ziggy Marley",
-    "statusId": "stressed"
+    "statusId": "status8"
   },
   "quote53": {
     "quote": "We can easily manage if we will only take, each day, the burden appointed to it. But the load will be too heavy for us if we carry yesterday’s burden over again today, and then add the burden of the morrow before we are required to bear it.",
     "author": "John Newton",
-    "statusId": "stressed"
+    "statusId": "status8"
   },
   "quote54": {
     "quote": "It's a good idea always to do something relaxing prior to making an important decision in your life.",
     "author": "Paulo Coelho",
-    "statusId": "stressed"
+    "statusId": "status8"
   },
   "quote55": {
     "quote": "There are thousands of causes for stress, and one antidote to stress is self-expression. That's what happens to me every day. My thoughts get off my chest, down my sleeves and onto my pad.",
     "author": "Garson Kanin",
-    "statusId": "stressed"
+    "statusId": "status8"
   },
   "quote56": {
     "quote": "We must have a pie. Stress cannot exist in the presence of a pie.",
     "author": "David Mamet",
-    "statusId": "stressed"
+    "statusId": "status8"
   }
 }
