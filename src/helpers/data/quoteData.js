@@ -20,21 +20,26 @@ const getQuotesByUid = (uid) => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-const getRandomQuote = () => new Promise((resolve, reject) => {
-  axios.get(`${baseUrl}/quotes.json`)
+const getRandomQuote = (statusId) => new Promise((resolve, reject) => {
+  axios.get(`${baseUrl}/quotes.json?orderBy="statusId"&equalTo="${statusId}"`)
     .then((response) => {
       const fbQuotes = response.data;
       const quotes = [];
+      const randomQuotes = [];
       if (fbQuotes) {
         Object.keys(fbQuotes).forEach((fbId) => {
           fbQuotes[fbId].id = fbId;
           quotes.push(fbQuotes[fbId]);
           console.error(fbId);
         });
-        const quoteToShowOne = quotes[Math.floor(Math.random() * quotes.length)];
-        console.error(quoteToShowOne);
+        const quoteToShow1 = quotes[Math.floor(Math.random() * quotes.length)];
+        const quoteToShow1Index = quotes.indexOf(quoteToShow1);
+        quotes.splice(quoteToShow1Index, 1);
+        const quoteToShow2 = quotes[Math.floor(Math.random() * quotes.length)];
+        randomQuotes.push(quoteToShow1, quoteToShow2);
+        console.error(randomQuotes);
       }
-      resolve(quotes);
+      resolve(randomQuotes);
     })
     .catch((err) => console.error(err));
 });

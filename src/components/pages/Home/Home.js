@@ -8,7 +8,6 @@ import journalData from '../../../helpers/data/journalData';
 import JournalCard from '../../shared/JournalCard/JournalCard';
 import statusData from '../../../helpers/data/statusData';
 import StatusCard from '../../shared/StatusCard/StatusCard';
-import quoteData from '../../../helpers/data/quoteData';
 
 class Home extends React.Component {
   state = {
@@ -37,12 +36,6 @@ class Home extends React.Component {
       .catch((err) => console.error('unable to get status: ', err));
   }
 
-  getRandomQuote = () => {
-    quoteData.getRandomQuote()
-      .then((quotes) => this.setState({ quotes }))
-      .catch((err) => console.error(err));
-  }
-
   componentDidMount() {
     this.getJournals();
     this.getGoals();
@@ -69,11 +62,9 @@ class Home extends React.Component {
      <h2>{today}</h2>
      <div className="d-flex flex-wrap">
         <div className=" col-8 card-group justify-content-center">
-          <h2>Status Here</h2>
           {buildStatusCards}
         </div>
         <div className=" col-4 card-group justify-content-center">
-        <h2>Goals Here</h2>
           {buildGoalCards}
         </div>
       </div>
