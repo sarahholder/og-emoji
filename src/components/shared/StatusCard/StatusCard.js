@@ -10,7 +10,7 @@ class statusCard extends React.Component {
 
   render() {
     const { status } = this.props;
-    const singleLink = `/journalEntry/${status.id}`;
+    const singleLink = `/journalentry/${status.id}`;
     return (
       <div>
          <div className="card">

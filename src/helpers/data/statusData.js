@@ -12,7 +12,6 @@ const getStatus = () => new Promise((resolve, reject) => {
         Object.keys(fbStatus).forEach((fbId) => {
           fbStatus[fbId].id = fbId;
           status.push(fbStatus[fbId]);
-          console.error(fbId);
         });
       }
       resolve(status);

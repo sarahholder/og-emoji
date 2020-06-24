@@ -8,12 +8,10 @@ const getGoalsByUid = (uid) => new Promise((resolve, reject) => {
     .then((response) => {
       const fbGoals = response.data;
       const goals = [];
-      console.error(fbGoals);
       if (fbGoals) {
         Object.keys(fbGoals).forEach((fbId) => {
           fbGoals[fbId].id = fbId;
           goals.push(fbGoals[fbId]);
-          console.error(fbId);
         });
       }
       resolve(goals);

@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 
 import authData from '../../../helpers/data/authData';
 import GoalsCard from '../../shared/GoalsCard/GoalsCard';
@@ -60,10 +61,12 @@ class Home extends React.Component {
     const buildStatusCards = status.map((s) => (
       <StatusCard key={s.id} status={s}/>
     ));
+    const today = moment().format('dddd, MMMM Do YYYY');
 
     return (
      <div className="justify-content-center">
      <h1>Home</h1>
+     <h2>{today}</h2>
      <div className="d-flex flex-wrap">
         <div className=" col-8 card-group justify-content-center">
           <h2>Status Here</h2>

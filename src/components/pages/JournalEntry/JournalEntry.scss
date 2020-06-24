@@ -1,0 +1,13 @@
+.comments{
+  resize: none; /* vertical-auto request instead of the JS */
+  width: 100%;
+  border: 2px solid #00f;
+  overflow: hidden;
+  height: auto;
+  padding: 3px;
+  margin: none;
+  box-sizing: border-box;
+  font-size: 12px;
+  word-wrap: wrap;
+  white-space: pre-wrap;
+}
