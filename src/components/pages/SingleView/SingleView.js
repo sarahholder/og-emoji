@@ -5,6 +5,7 @@ import journalData from '../../../helpers/data/journalData';
 class SingleView extends React.Component {
     state = {
       journalEntry: {},
+      quotes: [],
     }
 
     componentDidMount() {
