@@ -19,4 +19,6 @@ const getStatus = () => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-export default { getStatus };
+const getSingleStatus = (statusId) => axios.get(`${baseUrl}/status/${statusId}.json`);
+
+export default { getStatus, getSingleStatus };

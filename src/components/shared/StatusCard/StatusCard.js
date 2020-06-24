@@ -16,7 +16,7 @@ class statusCard extends React.Component {
          <div className="card">
           <div className="card-body">
       <p>{status.name}</p>
-        <Link className="btn btn-info" to={singleLink}>LINK</Link>
+        <Link className="btn btn-info" status={status} to={singleLink}>LINK</Link>
       </div>
     </div>
   </div>
