@@ -1,18 +1,22 @@
 {
 	"goal1": {
-		"goal": "Be emotionally focused. Each day set aside time to understand my emotional status, journal it and find news ways to achieve emotional well-being.",
+		"date": "01/01/1999",
+		"title": "Be emotionally focused. Each day set aside time to understand my emotional status, journal it and find news ways to achieve emotional well-being.",
 		"uid": "Sqbk5C0SGVYXxSaWZcMuDYvbHy33"
 	},
 	"goal2": {
-		"goal": "Make positive connections with 2 new people.",
+		"date": "01/01/1999",
+		"title": "Make positive connections with 2 new people.",
 		"uid": "Sqbk5C0SGVYXxSaWZcMuDYvbHy33"
 	},
 	"goal3": {
-		"goal": "Take time to meditate a least once a week.",
+		"date": "01/01/1999",
+		"title": "Take time to meditate a least once a week.",
 		"uid": "Sqbk5C0SGVYXxSaWZcMuDYvbHy33"
 	},
 	"goal4": {
-		"goal": "Reach out to a family member and friend once a week.",
+		"date": "01/01/1999",
+		"title": "Reach out to a family member and friend once a week.",
 		"uid": "12345"
 	}
 }

@@ -30,14 +30,12 @@ const getRandomQuote = (statusId) => new Promise((resolve, reject) => {
         Object.keys(fbQuotes).forEach((fbId) => {
           fbQuotes[fbId].id = fbId;
           quotes.push(fbQuotes[fbId]);
-          console.error(fbId);
         });
         const quoteToShow1 = quotes[Math.floor(Math.random() * quotes.length)];
         const quoteToShow1Index = quotes.indexOf(quoteToShow1);
         quotes.splice(quoteToShow1Index, 1);
         const quoteToShow2 = quotes[Math.floor(Math.random() * quotes.length)];
         randomQuotes.push(quoteToShow1, quoteToShow2);
-        console.error(randomQuotes);
       }
       resolve(randomQuotes);
     })

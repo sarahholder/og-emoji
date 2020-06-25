@@ -2,8 +2,9 @@ import React from 'react';
 import moment from 'moment';
 
 import authData from '../../../helpers/data/authData';
-import GoalsCard from '../../shared/GoalsCard/GoalsCard';
 import goalsData from '../../../helpers/data/goalsData';
+import GoalsCard from '../../shared/GoalsCard/GoalsCard';
+import NewGoalModal from '../../shared/NewGoalModal/NewGoalModal';
 import journalData from '../../../helpers/data/journalData';
 import JournalCard from '../../shared/JournalCard/JournalCard';
 import statusData from '../../../helpers/data/statusData';
@@ -14,6 +15,7 @@ class Home extends React.Component {
     journals: [],
     goals: [],
     status: [],
+    formOpen: false,
   }
 
   getGoals = () => {
@@ -42,6 +44,33 @@ class Home extends React.Component {
     this.getStatuses();
   }
 
+  saveGoal = (e) => {
+    this.toggle();
+    e.preventDefault();
+    const {
+      goalTitle,
+      goalDate,
+    } = this.state;
+    const newGoal = {
+      title: goalTitle,
+      date: goalDate,
+      uid: authData.getUid(),
+    };
+    goalsData.postGoal(newGoal)
+      .then(() => this.props.history.push('./*'))
+      .catch((err) => console.error('Unable to save goal', err));
+  }
+
+  removeGoal = (goalId) => {
+    goalsData.deleteGoal(goalId)
+      .then(() => this.getGoals())
+      .catch((err) => console.error('unable to delete goal: ', err));
+  }
+
+  formClose = () => {
+    this.setState({ formOpen: false });
+  }
+
   render() {
     const { journals, goals, status } = this.state;
 
@@ -49,29 +78,36 @@ class Home extends React.Component {
       <JournalCard key={journal.id} journalEntry={journal} />
     ));
     const buildGoalCards = goals.map((oneGoal) => (
-      <GoalsCard key={oneGoal.id} goal={oneGoal}/>
+      <GoalsCard key={oneGoal.id} goal={oneGoal} removeGoal={this.removeGoal} saveGoal={this.saveGoal}/>
     ));
     const buildStatusCards = status.map((s) => (
       <StatusCard key={s.id} status={s}/>
     ));
     const today = moment().format('dddd, MMMM Do YYYY');
 
+    const { formOpen } = this.state;
+
+    const { goal } = this.props;
+
     return (
+
      <div className="justify-content-center">
      <h1>Home</h1>
      <h2>{today}</h2>
-     <div className="d-flex flex-wrap">
+      <div className="d-flex flex-wrap">
         <div className=" col-8 card-group justify-content-center">
           {buildStatusCards}
         </div>
         <div className=" col-4 card-group justify-content-center">
           {buildGoalCards}
+      <button className="btn btn-success" onClick={() => this.setState({ formOpen: true })}>Add Goal</button>
+      { formOpen ? <NewGoalModal formClose={this.formClose} goal={goal} /> : '' }
         </div>
       </div>
       <div className="card-group justify-content-center">
         {buildJournalCards}
       </div>
-     </div>
+      </div>
     );
   }
 }
