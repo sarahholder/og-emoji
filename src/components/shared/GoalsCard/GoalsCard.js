@@ -22,17 +22,11 @@ class GoalsCard extends React.Component {
     this.contentEditable = React.createRef();
   }
 
-  goalChange = (e) => {
-    console.error(e);
-    this.setState({ title: e.target.value });
-  }
-
   updateGoal = (e) => {
     const { goal } = this.props;
     const updateId = goal.id;
     const title = this.state;
     const disTitle = title.title;
-    console.error('this is the title', title, disTitle);
     const updatedGoal = {
       // eslint-disable-next-line object-shorthand
       title: disTitle,
@@ -41,6 +35,12 @@ class GoalsCard extends React.Component {
     };
     goalsData.putGoal(updateId, updatedGoal)
       .then().catch((err) => console.error('unable to save goal: ', err));
+  }
+
+  goalChange = (e) => {
+    console.error(e);
+    this.setState({ title: e.target.value });
+    this.updateGoal(e);
   }
 
   componentDidMount() {
@@ -65,6 +65,7 @@ class GoalsCard extends React.Component {
       <div>
         <div className="card">
           <div className="card-body">
+        <div><button className="btn btn-danger" onClick={() => removeGoal(goal.id)}><i className="fa-md fas fa-times"></i></button></div>
           <p>{goal.date}</p>
            <ContentEditable
         innerRef={this.contentEditable}
@@ -72,9 +73,6 @@ class GoalsCard extends React.Component {
         disabled={false} // use true to disable edition
         onChange={this.goalChange} // handle innerHTML change
       />
-      <button className="btn btn-danger" onClick={() => removeGoal(goal.id)}>Delete</button>
-      <button className="btn btn-dark" onClick={this.updateGoal}>Update</button>
-
           </div>
         </div>
       </div>

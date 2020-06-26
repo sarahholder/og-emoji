@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import statusShape from '../../../helpers/propz/statusShape';
+import './StatusCard.scss';
 
 class statusCard extends React.Component {
   static propTypes = {
@@ -13,13 +14,19 @@ class statusCard extends React.Component {
     const singleLink = `/journalentry/${status.id}`;
     return (
       <div>
-         <div className="card">
+        <div className="card statusCard">
           <div className="card-body">
-      <p>{status.name}</p>
-        <Link className="btn btn-info" status={status} to={singleLink}>LINK</Link>
+        <Link className="btn btn-info imageLink" status={status} to={singleLink}>
+          <div>
+            <img className="statusImg img-card-top" src={status.emoji} alt={status.name}/>
+          </div>
+          <div>
+            {status.name}
+          </div>
+        </Link>
+          </div>
       </div>
     </div>
-  </div>
     );
   }
 }

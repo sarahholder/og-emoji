@@ -9,6 +9,7 @@ import journalData from '../../../helpers/data/journalData';
 import JournalCard from '../../shared/JournalCard/JournalCard';
 import statusData from '../../../helpers/data/statusData';
 import StatusCard from '../../shared/StatusCard/StatusCard';
+// import { ReactComponent as Happy } from '../../../../public/emogis/happyGREEN.svg';
 
 class Home extends React.Component {
   state = {
@@ -73,6 +74,7 @@ class Home extends React.Component {
 
   render() {
     const { journals, goals, status } = this.state;
+    const goalsLength = goals.length;
 
     const buildJournalCards = journals.map((journal) => (
       <JournalCard key={journal.id} journalEntry={journal} />
@@ -93,6 +95,8 @@ class Home extends React.Component {
 
      <div className="justify-content-center">
      <h1>Home</h1>
+     <div>
+     </div>
      <h2>{today}</h2>
       <div className="d-flex flex-wrap">
         <div className=" col-8 card-group justify-content-center">
@@ -100,13 +104,14 @@ class Home extends React.Component {
         </div>
         <div className=" col-4 card-group justify-content-center">
           {buildGoalCards}
-      <button className="btn btn-success" onClick={() => this.setState({ formOpen: true })}>Add Goal</button>
-      { formOpen ? <NewGoalModal formClose={this.formClose} goal={goal} /> : '' }
+          {goals.length < 3 ? <button className="btn btn-success" onClick={() => this.setState({ formOpen: true })}>Add Goal</button> : ''}
+          { formOpen ? <NewGoalModal formClose={this.formClose} goal={goal} /> : '' }
         </div>
       </div>
       <div className="card-group justify-content-center">
         {buildJournalCards}
       </div>
+      <div/>
       </div>
     );
   }

@@ -21,6 +21,13 @@ const getJournalsByUid = (uid) => new Promise((resolve, reject) => {
 
 const getSingleEntry = (journalId) => axios.get(`${baseUrl}/journal/${journalId}.json`);
 
+const getTodaysEntry = (date) => axios.get(`${baseUrl}/journal/${date}.json`);
+
 const postEntry = (newEntry) => axios.post(`${baseUrl}/journal.json`, newEntry);
 
-export default { getJournalsByUid, getSingleEntry, postEntry };
+export default {
+  getJournalsByUid,
+  getSingleEntry,
+  postEntry,
+  getTodaysEntry,
+};

@@ -1,0 +1,22 @@
+.statusImg{
+  object-fit: cover;
+  width: 11vh;
+  min-width: 100px;
+}
+
+.statusCard{
+  border: none; 
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.imageLink{
+  background-color: rgba(235, 59, 59, 0);
+  border-color: rgba(255, 255, 255, 0);
+  border-radius: 10px;
+}
+
+.imageLink:hover{
+  background-color: rgba(255, 230, 0, 0.637);
+  border-color:  rgba(255, 255, 255, 0);
+  border-radius: 10px;
+}

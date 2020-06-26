@@ -13,7 +13,8 @@ class JournalEntry extends React.Component {
     date: '',
     status: '',
     comments: '',
-    likeQuote: '',
+    likeQuote1: '',
+    likeQuote2: '',
     singleStatus: {},
     quotes: [],
   }
@@ -49,13 +50,16 @@ class JournalEntry extends React.Component {
 
     const {
       comments,
+      likeQuote1,
+      likeQuote2,
     } = this.state;
 
     const newEntry = {
       date: moment().format('MM/DD/YYYY'),
       comments,
       status: thisId,
-      likeQuote: '',
+      likeQuote1,
+      likeQuote2,
       uid: authData.getUid(),
     };
     journalData.postEntry(newEntry)
@@ -68,11 +72,12 @@ class JournalEntry extends React.Component {
     const { quotes } = this.state;
     const {
       comments,
-      //  likeQuote,
+      likeQuote1,
+      likeQuote2,
     } = this.state;
 
     const buildQuotes = quotes.map((quote) => (
-      <QuoteCard key={quote.id} quote={quote} />
+      <QuoteCard key={quote.id} quote={quote} likeQuote1={likeQuote1} likeQuote2={likeQuote2}/>
     ));
 
     return (
@@ -83,14 +88,14 @@ class JournalEntry extends React.Component {
         <form className="text-left">
           <div className="form-group">
             <label htmlFor="entry-comments"></label>
-            <input
-            type="text"
-            className="form-control comments"
+            <textarea
+            type="input"
+            className="form-control"
             id="entry-comments"
             value={comments}
             placeholder="enter you thoughts about today here"
             onChange={this.commentsChange}
-            />
+            ></textarea>
           </div>
           <button className="btn btn-primary" onClick={this.saveEntry}>Save</button>
         </form>
