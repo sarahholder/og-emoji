@@ -76,7 +76,7 @@ class Home extends React.Component {
     const { journals, goals, status } = this.state;
 
     const buildJournalCards = journals.map((journal) => (
-      <JournalCard key={journal.id} journalEntry={journal} />
+      <JournalCard key={journal.id} journalEntry={journal} status={status} />
     ));
     const buildGoalCards = goals.map((oneGoal) => (
       <GoalsCard key={oneGoal.id} goal={oneGoal} removeGoal={this.removeGoal} saveGoal={this.saveGoal}/>

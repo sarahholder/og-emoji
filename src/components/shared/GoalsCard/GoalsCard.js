@@ -57,6 +57,11 @@ class GoalsCard extends React.Component {
       .catch((err) => console.error('Unable to get goal to edit: ', err));
   }
 
+  refreshPage = (e) => {
+    e.preventDefault();
+    window.location.reload();
+  }
+
   render() {
     const { goal, removeGoal } = this.props;
 
@@ -79,6 +84,7 @@ class GoalsCard extends React.Component {
               onChange={this.goalChange} // handle innerHTML change
               />
           </div>
+          <button onClick={ this.refreshPage }> save </button>
         </div>
       </div>
     );

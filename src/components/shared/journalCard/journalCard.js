@@ -12,6 +12,8 @@ class JournalCard extends React.Component {
   render() {
     const { journalEntry } = this.props;
     const singleLink = `/singleview/${journalEntry.id}`;
+    const { status } = this.props;
+    console.error('this is the status info', status);
 
     return (
       <div className="cardWidth m-1">
