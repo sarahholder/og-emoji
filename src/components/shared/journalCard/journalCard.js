@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import journalEntryShape from '../../../helpers/propz/journalEntryShape';
+import './JournalCard.scss';
 
 class JournalCard extends React.Component {
   static propTypes = {
@@ -13,9 +14,9 @@ class JournalCard extends React.Component {
     const singleLink = `/singleview/${journalEntry.id}`;
 
     return (
-      <div>
-        <div className="card">
-          <div className="card-body">
+      <div className="cardWidth m-1">
+        <div className="card journalCard">
+          <div className="card-body p-1">
             <h5 className="card-title">{journalEntry.date}</h5>
             <Link className="btn btn-info" to={singleLink}><i className="fas fa-binoculars"></i></Link>
           </div>

@@ -81,28 +81,32 @@ class JournalEntry extends React.Component {
     ));
 
     return (
-      <div className="NewEntry">
-      <div className="col-12">
-      <h2>New Journal Entry: </h2>
-      <h2> Feeling {singleStatus.name}</h2>
-        <form className="text-left">
-          <div className="form-group">
-            <label htmlFor="entry-comments"></label>
-            <textarea
-            type="input"
-            className="form-control"
-            id="entry-comments"
-            value={comments}
-            placeholder="enter you thoughts about today here"
-            onChange={this.commentsChange}
-            ></textarea>
-          </div>
-          <button className="btn btn-primary" onClick={this.saveEntry}>Save</button>
-        </form>
-        <div className="d-flex flex-wrap">
-          {buildQuotes}
+      <div>
+        <div className="col-12">
+        <img src={singleStatus.emoji} alt="emoji of feeling"/>
+          <h2>Journal Entry: </h2>
+          <form className="text-left">
+            <div className="form-group">
+              <label htmlFor="entry-comments"></label>
+              <textarea
+              type="input"
+              className="form-control"
+              id="entry-comments"
+              value={comments}
+              placeholder="enter you thoughts about today here"
+              onChange={this.commentsChange}
+              ></textarea>
+            </div>
+          </form>
         </div>
-      </div>
+        <div>
+          <button className="btn btn-primary" onClick={this.saveEntry}>Save</button>
+        </div>
+        <div>
+          <div className="d-flex flex-wrap">
+            {buildQuotes}
+          </div>
+        </div>
       </div>
     );
   }

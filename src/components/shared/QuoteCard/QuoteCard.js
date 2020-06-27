@@ -37,22 +37,20 @@ class QuoteCard extends React.Component {
     const { quote } = this.props;
     return (
       <div className="col-6">
-         <div className="card">
-          <div className="card-body">
-            <p>{quote.quote}</p>
-            <p className="text-right">~ {quote.author}</p>
+         <div className="card d-flex flex-wrap jusitfy-content-center align-content-center p-3">
+            {quote.quote}
+            <p className="text-right m-0">~ {quote.author}</p>
               <input
               type="checkbox"
               name={quote.id}
               id={quote.id}
               value={quote.id}
-              className="css-checkbox"
+              className="css-checkbox m-0"
               onChange= {this.quoteChange}
               />
-              <label htmlFor={quote.id} className="css-label"></label>
+              <label htmlFor={quote.id} className="css-label m-0"></label>
           </div>
         </div>
-      </div>
     );
   }
 }

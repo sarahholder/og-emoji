@@ -74,7 +74,6 @@ class Home extends React.Component {
 
   render() {
     const { journals, goals, status } = this.state;
-    const goalsLength = goals.length;
 
     const buildJournalCards = journals.map((journal) => (
       <JournalCard key={journal.id} journalEntry={journal} />
@@ -92,27 +91,37 @@ class Home extends React.Component {
     const { goal } = this.props;
 
     return (
-
-     <div className="justify-content-center">
-     <h1>Home</h1>
-     <div>
-     </div>
-     <h2>{today}</h2>
-      <div className="d-flex flex-wrap">
-        <div className=" col-8 card-group justify-content-center">
+  <div>
+    <div className="justify-content-center">
+      <h1>{today}</h1>
+    </div>
+    <div className="d-flex flex-wrap justify-content-center">
+      <div className="col-md-6">
+        <h2>Pick Emoji:</h2>
+        <div className="row justify-content-center">
+          <div className="card-group d-flex flex-wrap justify-content-center emojiSection">
           {buildStatusCards}
+          </div>
         </div>
-        <div className=" col-4 card-group justify-content-center">
+      </div>
+    <div className="col-md-6 d-flex flex-wrap justify-content-center ">
+      <h2>Track up to 3 goals:</h2>
+      <div className="card-group goalsSection">
           {buildGoalCards}
           {goals.length < 3 ? <button className="btn btn-success" onClick={() => this.setState({ formOpen: true })}>Add Goal</button> : ''}
           { formOpen ? <NewGoalModal formClose={this.formClose} goal={goal} /> : '' }
-        </div>
       </div>
-      <div className="card-group justify-content-center">
+    </div>
+    </div>
+    <div className="mt-2">
+    <h2>Previous Journal Entries:</h2>
+    <div className="d-flex flex-wrap justify-content-center">
+    <div className="card-group d-flex flex-wrap justify-content-center">
         {buildJournalCards}
-      </div>
-      <div/>
-      </div>
+    </div>
+    </div>
+    </div>
+    </div>
     );
   }
 }
