@@ -6,24 +6,26 @@ import './JournalCard.scss';
 
 class JournalCard extends React.Component {
   static propTypes = {
-    journalEntry: journalEntryShape.entryShape,
+    journalEntry: journalEntryShape.journalEntryShape,
   }
 
   render() {
     const { journalEntry } = this.props;
     const singleLink = `/singleview/${journalEntry.id}`;
-    const { status } = this.props;
-    console.error('this is the status info', status);
-
     return (
-      <div className="cardWidth m-1">
-        <div className="card journalCard">
-          <div className="card-body p-1">
-            <h5 className="card-title">{journalEntry.date}</h5>
-            <Link className="btn btn-info" to={singleLink}><i className="fas fa-binoculars"></i></Link>
-          </div>
-        </div>
+      <div className="card-group">
+  <div class="journalPreviewCard">
+    <div class="content">
+      <div class="front" style={{ backgroundColor: journalEntry.statusColor }}>
       </div>
+      <Link to={singleLink}>
+      <div class="back">
+        {journalEntry.date}
+      </div>
+      </Link>
+    </div>
+  </div>
+  </div>
     );
   }
 }

@@ -1,42 +1,42 @@
 {
   "status1": {
     "name": "happy",
-    "color": "#7ec8cc",
-    "emoji": "https://lh3.googleusercontent.com/pw/ACtC-3eFvGIOKuVQH06cHooPMVWohZyp5v6cI25Qa0fmVssX6fwqvYqIjWGzUe-npPjzvd6jT9owpoyCGKuNryOKYuh1azMOCkHduT__f4O-U0xNUIX45e5JcIb-JheiXLBWXxG_cxQ3R0OTHROj_IOlgwyl=s512-no?authuser=0"
+    "color": "#D0EE9F",
+    "emoji": "https://lh3.googleusercontent.com/pw/ACtC-3fRL6mB55RrjGvfG3mbK-CUInj0-WEfUnMmgNEUIBwiCPZ_z5p1inUvfrWYtV6c_trX3lMJMqL3v2rEiygvj-ER5ZPog0YRGGNnplIkE18y5kXG1WMXsAPPwgfRV3KKHvZMUfUBL2H-VFziR2-i53aO=s512-no?authuser=0"
   },
   "status2": {
     "name": "sad",
     "color": "#CDDAF0",
-    "emoji": "https://lh3.googleusercontent.com/pw/ACtC-3fp6xZ3fJ6eiW2BtUTdwxHXYFMdzMcv55tiG5kqZ2NaaJH3JdSQwSU-yQDPAxaqc7w449zJrTydiQNwxtf5264flpOcE2ug-K2XKNb7eUvRj6x8jULsKZorw6GnCeN1rWsuPRqVxwAyQi8sgRN7sE0U=s512-no?authuser=0"
+    "emoji": "https://lh3.googleusercontent.com/pw/ACtC-3cA0_0uJO9QOuy3mAn6PsI5WtacIt7lUD5Hid94fYOlA07dx0woFYSqCVaBOMJugUi9kYMpDNgwxoCEbbH3_7FMXxmiHoY0qXAWiY7u44jU10DwzLoOcsuqYJFzvow7_HQDGZXx4o3m1mxsVmGRBkGQ=s512-no?authuser=0"
   },
   "status3": {
     "name": "angry",
-    "color": "#ffa1a1",
-    "emoji": "https://lh3.googleusercontent.com/pw/ACtC-3dTNvjaGwR55mJlwaD2AZwYq6FKxPGUHOaUmkU4QMqH9q9LXMrt3o4nHnTODc8NwwarVSd1UCEfNPuAr9zZMtIyVR3mFu1Cw53SyGBH3tICV2rGJ5A_l5d0ScLLUjF-vn5db4XCnnmI0wA8BGt6aALS=s512-no?authuser=0"
+    "color": "#FF8686",
+    "emoji": "https://lh3.googleusercontent.com/pw/ACtC-3fhojdGh7PoXtLuUZslDVS_EiyfSvnagu98dUXYit5OozfwwbzDxD8QkL06AudG0K5ZBcEYCgPMN-Fm3_DhhD9QStgMk_LuMLjBekQz9Ep9KP2OKHwMsq7Zyw4O0wEzL18Ul3E8qLa8FBhHWedYFGPN=s512-no?authuser=0"
   },
   "status4": {
     "name": "depressed",
-    "color": "#ffd3b6",
-    "emoji": "https://lh3.googleusercontent.com/pw/ACtC-3eqO46UTKGRKucDaS-b6PHIV3134g8xrchUSGM49eSk2ob9fYt3mZ6cCkRVdm_HPP5GhNklpszwgKHagnFc_nOnIRSXkNH--BOuoqw9zzLSX4Rca5J1CxGmKyIah1T_LAFtQgzKaujmjD3XYx6N9MmA=s512-no?authuser=0"
+    "color": "#C08CBA",
+    "emoji": "https://lh3.googleusercontent.com/pw/ACtC-3daSUpjG_pjf-yX5LG7NBgE27qpx16Jzp6rAisanzN7Yg4FTUiZcyn1bER_5LvFbHotzCkgg2x3wy6463OK4ao--AYipbg_IkR0Z0v9YVeNxc53SBNVbjXZLtHgI24hNbHUot56lj464fVJ9X5TGlV9=s512-no?authuser=0"
   },
   "status5": {
     "name": "lonely",
-    "color": "#dcedc1",
-    "emoji": "https://lh3.googleusercontent.com/pw/ACtC-3e3crNvD8tWE_nhCPLG4yxYFrEtgpj3TZ7zQVZwcP8nm8wfGcHLHx8xiVEr3zG-9sMW0tg0f5tOYj-8JVSKyIR3dlssMOmjCLBkdvH1a1Z2dR_kg8LONi6I4Irw7EGzlrzyk9KyMM2sslWhiulqHCW6=s512-no?authuser=0"
+    "color": "#91A5F4",
+    "emoji": "https://lh3.googleusercontent.com/pw/ACtC-3d1LE6nT1hCU-Jp7VmFxkqpJUncQdEad9WCN3hGgvbnW2tWfvJ9jy03rn9okC5myNC5Yb7o1AW2a4nYqBg3qUmbkctMInCxukgE7lYMc80oIXcXIaYDPgbtc3z2pZ9X2ZmYwQd1z0TW7lg49SamYp6d=s512-no?authuser=0"
   },
   "status6": {
     "name": "hopeless",
-    "color": "#dddddd",
-    "emoji": "https://lh3.googleusercontent.com/pw/ACtC-3cQf3WV821-9rwnM7WPN-Fip5Hwek-lVI2XTjpHhXa65T4Pu3eSjZSTisvYCDqV4dXD2EPwA4d2mX7foj8JBlNcMnY-mCoLAMlhcGQ_R3mb0kOtBWE4j4HlA9n9GiyZVyukAlalggHtlMYDA_2yJXJz=s512-no?authuser=0"
+    "color": "#ABABAB",
+    "emoji": "https://lh3.googleusercontent.com/pw/ACtC-3cA0_0uJO9QOuy3mAn6PsI5WtacIt7lUD5Hid94fYOlA07dx0woFYSqCVaBOMJugUi9kYMpDNgwxoCEbbH3_7FMXxmiHoY0qXAWiY7u44jU10DwzLoOcsuqYJFzvow7_HQDGZXx4o3m1mxsVmGRBkGQ=s512-no?authuser=0"
   },
   "status7": {
     "name": "scared",
-    "color": "#e4dcf1",
-    "emoji": "https://lh3.googleusercontent.com/pw/ACtC-3eQljnoap9VnbJaUWhCIYnB8qtU0FEGKttzbRmNoRsd-TYR1OWFAvHmD1srjU3_aoMxc5vesetG6Tl4E1_zC-c717Ig0uT8wSsVayvQGB_qaQ4GmBxeeZi3IdLobnNS1Bpmi6mYb8Ki47YAJlMkOfzq=s512-no?authuser=0"
+    "color": "#FFBC6A",
+    "emoji": "https://lh3.googleusercontent.com/pw/ACtC-3e062cwRWrh7V2SAUlmwPpAaxwcMJYuI7YDutDEHM3am1_MyEQuHkSkWJja84BQqAbix6gOSADb4htVsVvQ3kSdm1GnAhnT2LNt5_YNPLBCitv5tet2HTk5cSpG5JxsrPgUvGHsDD07DAkP3AugP66p=s512-no?authuser=0"
   },
   "status8": {
     "name": "stressed",
-    "color": "#FBFEBE",
-    "emoji": "https://lh3.googleusercontent.com/pw/ACtC-3cbSgHZoWVvLyrojRC6OkpcpTlytIPon73JEK7CBigg1WPvmti5Xe4rqm7CAsmqY_3cxJ0TlvKhxNJmDuaHcDEWyd53uC_U8Jy4HnuwKGRtLQKzY4T_p_V8bOSawYOWwDXtPseqoCX3C2kyuv9w6kit=s512-no?authuser=0"
+    "color": "#FFF7A3",
+    "emoji": "https://lh3.googleusercontent.com/pw/ACtC-3dU-u_RfdVEbSxz5COonE6RZgubUhGtQjpC17QKL-Xz52q3CdYm13DNlF5Ehmv4mmplKF2opFpwrCQcCf6vSDc3T8oCqhupLxM_LV5xSjXn5TBKlo9fe9h-EoI7LBvyQTZE86R1MEnBDmEZNhmNVrwO=s512-no?authuser=0"
   }
 }

@@ -35,7 +35,8 @@ class GoalsCard extends React.Component {
       date: moment().format('MM/DD/YYYY'),
     };
     goalsData.putGoal(updateId, updatedGoal)
-      .then().catch((err) => console.error('unable to save goal: ', err));
+      .then(() => this.props.getGoals())
+      .catch((err) => console.error('unable to save goal: ', err));
   }
 
   goalChange = (e) => {
@@ -55,11 +56,6 @@ class GoalsCard extends React.Component {
         });
       })
       .catch((err) => console.error('Unable to get goal to edit: ', err));
-  }
-
-  refreshPage = (e) => {
-    e.preventDefault();
-    window.location.reload();
   }
 
   render() {
@@ -84,7 +80,6 @@ class GoalsCard extends React.Component {
               onChange={this.goalChange} // handle innerHTML change
               />
           </div>
-          <button onClick={ this.refreshPage }> save </button>
         </div>
       </div>
     );

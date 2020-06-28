@@ -14,7 +14,7 @@ class statusCard extends React.Component {
     const singleLink = `/journalentry/${status.id}`;
     return (
       <div>
-        <div className="card statusCard m-1" style={{ backgroundColor: status.color }}>
+        <div className="statusCard" style={{ backgroundColor: status.color }}>
           <div className="card-body p-0">
         <Link className="btn btn-info imageLink" status={status} to={singleLink}>
           <div>

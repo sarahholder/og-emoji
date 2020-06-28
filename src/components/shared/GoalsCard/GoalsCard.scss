@@ -1,14 +1,8 @@
-
-.fa-times{
-  color: gray;
+.goalsCard{
+  margin: 0;
+  border-radius: 0;
+  border: 0;
 }
-
-.fa-times:hover{
-size: 10px;
-color: red;
-cursor: pointer;
-}
-
-.goalsCard {
-  
+.goalsCard:hover{
+  background-color: blueviolet;
 }

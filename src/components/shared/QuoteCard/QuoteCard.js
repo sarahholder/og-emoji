@@ -9,8 +9,7 @@ class QuoteCard extends React.Component {
   }
 
   state = {
-    likeQuote1: '',
-    likeQuote2: '',
+    likeQuote: '',
   }
 
   quoteChange = (e) => {
