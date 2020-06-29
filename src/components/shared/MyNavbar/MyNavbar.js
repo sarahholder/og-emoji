@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { NavLink as RRNavLink } from 'react-router-dom';
 import {
   Collapse,
@@ -40,28 +41,26 @@ class MyNavbar extends React.Component {
       const { authed } = this.props;
       if (authed) {
         return (
-          <Nav navbar>
+        <div>
+        <Navbar color="" light className="d-flex flex-wrap row justify-content-center">
+          <div tag={RRNavLink} to='/home'><img className="navImg" src="https://lh3.googleusercontent.com/pw/ACtC-3foZHVsERqYPFIbkpqTZpuKs-Ymc9Pw9VLOz5qexhmLXw04IyiJS3f9cJSCJYCgW4dHeqZ17ajsLApTyAqr108-2pifAwyDFveZpMWDhMvv_dPNJQvxfk-UhVUkZJ-9U_TLy6IOSbk1sDfLCI8H97wc=w1500-h600-no?authuser=0" alt="compass logo"/></div>
+          <NavbarToggler onClick={this.toggle}/>
+          <Collapse isOpen={isOpen} navbar>
             <NavItem>
-              <NavLink tag={RRNavLink} to='/home'>Home</NavLink>
+              <NavLink className="logoutButton" onClick={this.logMeOut}>Logout</NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink onClick={this.logMeOut}>Logout</NavLink>
-            </NavItem>
-          </Nav>
+          </Collapse>
+        </Navbar>
+        </div>
+
         );
       }
       return <Nav className="ml-auto" navbar></Nav>;
     };
 
     return (
-      <div className="myNavbar mx-auto">
-        <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">OG Emoji</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={isOpen} navbar>
-            {buildNavbar()}
-          </Collapse>
-        </Navbar>
+      <div>
+        {buildNavbar()}
       </div>
     );
   }

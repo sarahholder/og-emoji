@@ -1,12 +1,10 @@
 import React from 'react';
-import moment from 'moment';
 
 import authData from '../../../helpers/data/authData';
 import goalsData from '../../../helpers/data/goalsData';
 import GoalsCard from '../../shared/GoalsCard/GoalsCard';
 import NewGoalModal from '../../shared/NewGoalModal/NewGoalModal';
-import journalData from '../../../helpers/data/journalData';
-import JournalCard from '../../shared/JournalCard/JournalCard';
+import JournalCard from '../../shared/JournalCard/journalCard';
 import statusData from '../../../helpers/data/statusData';
 import StatusCard from '../../shared/StatusCard/StatusCard';
 import smashData from '../../../helpers/data/smashData';
@@ -73,7 +71,12 @@ class Home extends React.Component {
   }
 
   render() {
-    const { journals, goals, status } = this.state;
+    const {
+      journals,
+      goals,
+      status,
+      formOpen,
+    } = this.state;
 
     const buildJournalCards = journals.map((journal) => (
       <JournalCard key={journal.id} journalEntry={journal} status={status} />
@@ -84,16 +87,12 @@ class Home extends React.Component {
     const buildStatusCards = status.map((s) => (
       <StatusCard key={s.id} status={s}/>
     ));
-    const today = moment().format('dddd, MMMM Do YYYY');
-
-    const { formOpen } = this.state;
 
     const { goal } = this.props;
 
     return (
   <div>
     <div className="justify-content-center">
-      <h1>{today}</h1>
     </div>
     <div className="d-flex flex-wrap justify-content-center">
       <div className="col-md-6">
@@ -108,7 +107,7 @@ class Home extends React.Component {
       <h2>Track up to 3 goals:</h2>
       <div className="card-group goalsSection">
           {buildGoalCards}
-          {goals.length < 3 ? <button className="btn btn-success" onClick={() => this.setState({ formOpen: true })}>Add Goal</button> : ''}
+          {goals.length < 3 ? <button className="btn btn-success" onClick={() => this.setState({ formOpen: true }) }>Add Goal</button> : ''}
           { formOpen ? <NewGoalModal formClose={this.formClose} goal={goal} /> : '' }
       </div>
     </div>

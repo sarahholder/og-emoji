@@ -14,12 +14,12 @@ class JournalCard extends React.Component {
     const singleLink = `/singleview/${journalEntry.id}`;
     return (
       <div className="card-group">
-  <div class="journalPreviewCard">
-    <div class="content">
-      <div class="front" style={{ backgroundColor: journalEntry.statusColor }}>
+  <div className="journalPreviewCard">
+    <div className="content">
+      <div className="front" style={{ backgroundColor: journalEntry.statusColor }}>
       </div>
       <Link to={singleLink}>
-      <div class="back">
+      <div className="back">
         {journalEntry.date}
       </div>
       </Link>

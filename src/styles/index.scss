@@ -2,6 +2,10 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
-body {
-background-color: lightblue;
+body { 
+    background-image: url(https://images.unsplash.com/photo-1474540412665-1cdae210ae6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1524&q=80);
+    background-position: cover;
+}
+.coverImg {
+    width: 100vh;
 }
