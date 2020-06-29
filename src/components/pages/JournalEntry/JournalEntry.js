@@ -4,8 +4,6 @@ import moment from 'moment';
 import './JournalEntry.scss';
 import authData from '../../../helpers/data/authData';
 import journalData from '../../../helpers/data/journalData';
-import quoteData from '../../../helpers/data/quoteData';
-import QuoteCard from '../../shared/QuoteCard/QuoteCard';
 import statusData from '../../../helpers/data/statusData';
 
 class JournalEntry extends React.Component {
@@ -13,22 +11,10 @@ class JournalEntry extends React.Component {
     date: '',
     status: '',
     comments: '',
-    likeQuote: '',
     singleStatus: {},
-    quotes: [],
-  }
-
-  getRandomQuote = () => {
-    const thisId = this.props.match.params.statusId;
-    quoteData.getRandomQuote(thisId)
-      .then((quotes) => {
-        this.setState({ quotes });
-      })
-      .catch((err) => console.error(err));
   }
 
   componentDidMount() {
-    this.getRandomQuote();
     const thisStatusId = this.props.match.params.statusId;
     statusData.getSingleStatus(thisStatusId)
       .then((response) => {
@@ -55,7 +41,6 @@ class JournalEntry extends React.Component {
       date: moment().format('MM/DD/YYYY'),
       comments,
       status: thisId,
-      likeQuote: '',
       uid: authData.getUid(),
     };
     journalData.postEntry(newEntry)
@@ -65,39 +50,40 @@ class JournalEntry extends React.Component {
 
   render() {
     const { singleStatus } = this.state;
-    const { quotes } = this.state;
     const {
       comments,
-      //  likeQuote,
     } = this.state;
 
-    const buildQuotes = quotes.map((quote) => (
-      <QuoteCard key={quote.id} quote={quote} />
-    ));
-
     return (
-      <div className="NewEntry">
-      <div className="col-12">
-      <h2>New Journal Entry: </h2>
-      <h2> Feeling {singleStatus.name}</h2>
-        <form className="text-left">
-          <div className="form-group">
-            <label htmlFor="entry-comments"></label>
-            <input
-            type="text"
-            className="form-control comments"
-            id="entry-comments"
-            value={comments}
-            placeholder="enter you thoughts about today here"
-            onChange={this.commentsChange}
-            />
+      <div>
+        <div>
+          <h2>Journal Entry: </h2>
+          <div className="d-flex flex-wrap align-content-center row">
+            <div>
+              <img className="emojiEntry col-1" src={singleStatus.emoji} alt="emoji of feeling"/>
+            </div>
+            <form className="text-left">
+              <div className="form-group">
+                <label htmlFor="entry-comments"></label>
+                <textarea
+                type="input"
+                className="form-control entryComments"
+                id="entry-comments"
+                value={comments}
+                placeholder="enter you thoughts about today here"
+                onChange={this.commentsChange}
+                ></textarea>
+              </div>
+            </form>
           </div>
-          <button className="btn btn-primary" onClick={this.saveEntry}>Save</button>
-        </form>
-        <div className="d-flex flex-wrap">
-          {buildQuotes}
         </div>
-      </div>
+          <div>
+            <button className="btn btn-primary" onClick={this.saveEntry}>Save</button>
+          </div>
+          <div>
+            <div className="d-flex flex-wrap">
+          </div>
+        </div>
       </div>
     );
   }

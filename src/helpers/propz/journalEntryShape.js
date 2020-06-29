@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 
-const entryShape = PropTypes.shape({
+const journalEntryShape = PropTypes.shape({
   id: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   status: PropTypes.string.isRequired,
   comments: PropTypes.string.isRequired,
-  likeQuotes: PropTypes.string,
+  likeQuote: PropTypes.string,
   uid: PropTypes.string.isRequired,
 });
 
-export default { entryShape };
+export default { journalEntryShape };

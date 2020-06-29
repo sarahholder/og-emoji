@@ -9,6 +9,7 @@ import journalData from '../../../helpers/data/journalData';
 import JournalCard from '../../shared/JournalCard/JournalCard';
 import statusData from '../../../helpers/data/statusData';
 import StatusCard from '../../shared/StatusCard/StatusCard';
+import smashData from '../../../helpers/data/smashData';
 
 class Home extends React.Component {
   state = {
@@ -25,11 +26,11 @@ class Home extends React.Component {
       .catch((err) => console.error('unable to get goals: ', err));
   }
 
-  getJournals = () => {
+  getSmashJournals = () => {
     const uid = authData.getUid();
-    journalData.getJournalsByUid(uid)
+    smashData.getJournalsWithStatusId(uid)
       .then((journals) => this.setState({ journals }))
-      .catch((err) => console.error('unable to get journals: ', err));
+      .catch((err) => console.error('unable to get journals'));
   }
 
   getStatuses = () => {
@@ -39,7 +40,7 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-    this.getJournals();
+    this.getSmashJournals();
     this.getGoals();
     this.getStatuses();
   }
@@ -75,10 +76,10 @@ class Home extends React.Component {
     const { journals, goals, status } = this.state;
 
     const buildJournalCards = journals.map((journal) => (
-      <JournalCard key={journal.id} journalEntry={journal} />
+      <JournalCard key={journal.id} journalEntry={journal} status={status} />
     ));
     const buildGoalCards = goals.map((oneGoal) => (
-      <GoalsCard key={oneGoal.id} goal={oneGoal} removeGoal={this.removeGoal} saveGoal={this.saveGoal}/>
+      <GoalsCard key={oneGoal.id} goal={oneGoal} removeGoal={this.removeGoal} saveGoal={this.saveGoal} getGoals={this.getGoals}/>
     ));
     const buildStatusCards = status.map((s) => (
       <StatusCard key={s.id} status={s}/>
@@ -90,24 +91,37 @@ class Home extends React.Component {
     const { goal } = this.props;
 
     return (
-
-     <div className="justify-content-center">
-     <h1>Home</h1>
-     <h2>{today}</h2>
-      <div className="d-flex flex-wrap">
-        <div className=" col-8 card-group justify-content-center">
+  <div>
+    <div className="justify-content-center">
+      <h1>{today}</h1>
+    </div>
+    <div className="d-flex flex-wrap justify-content-center">
+      <div className="col-md-6">
+        <h2>Pick Emoji:</h2>
+        <div className="row justify-content-center">
+          <div className="card-group d-flex flex-wrap justify-content-center emojiSection">
           {buildStatusCards}
-        </div>
-        <div className=" col-4 card-group justify-content-center">
-          {buildGoalCards}
-      <button className="btn btn-success" onClick={() => this.setState({ formOpen: true })}>Add Goal</button>
-      { formOpen ? <NewGoalModal formClose={this.formClose} goal={goal} /> : '' }
+          </div>
         </div>
       </div>
-      <div className="card-group justify-content-center">
+    <div className="col-md-6 d-flex flex-wrap justify-content-center ">
+      <h2>Track up to 3 goals:</h2>
+      <div className="card-group goalsSection">
+          {buildGoalCards}
+          {goals.length < 3 ? <button className="btn btn-success" onClick={() => this.setState({ formOpen: true })}>Add Goal</button> : ''}
+          { formOpen ? <NewGoalModal formClose={this.formClose} goal={goal} /> : '' }
+      </div>
+    </div>
+    </div>
+    <div className="mt-2">
+    <h2>Previous Journal Entries:</h2>
+    <div className="d-flex flex-wrap justify-content-center">
+      <div className="card-group d-flex flex-wrap justify-content-center">
         {buildJournalCards}
       </div>
-      </div>
+    </div>
+    </div>
+    </div>
     );
   }
 }
