@@ -20,36 +20,17 @@ class QuoteCard extends React.Component {
     const { journalId } = this.props.match.params;
     const quoteId = e.target.id;
     journalData.updateLikeQuote(journalId, quoteId)
-      .then(() => console.error('it worked'))
+      .then(() => this.props.getCompleteJournal())
       .catch((err) => console.error(err));
-
-    // const { likeQuote1 } = this.state;
-    // const { likeQuote2 } = this.state;
-    // console.error('this is e', e.target.checked);
-    // if (e.target.checked) {
-    //   if (likeQuote1 === '' && likeQuote2 === '') {
-    //     this.setState({ likeQuote1: e.target.value });
-    //   } else if (likeQuote1 === '' && likeQuote2 !== e.target.value) {
-    //     this.setState({ likeQuote1: e.target.value });
-    //   } else if (likeQuote2 === '' && likeQuote1 !== e.target.value) {
-    //     this.setState({ likeQuote2: e.target.value });
-    //   } else {
-    //     if (e.target.value === likeQuote1) {
-    //       this.setState({ likeQuote1: '' });
-    //     }
-    //     this.setState({ likeQuote2: '' });
-    //   }
-    // }
   }
 
   render() {
-    const { quote } = this.props;
-    return (
-      <div className="col-6">
-         <div className="card d-flex flex-wrap jusitfy-content-center align-content-center p-3">
-            {quote.quote}
-            <p className="text-right m-0">~ {quote.author}</p>
-              <input
+    const { quote, quoteSelected } = this.props;
+    const buildCheckbox = () => {
+      if (quoteSelected === false) {
+        return (
+          <React.Fragment>
+               <input
               type="checkbox"
               name={quote.id}
               id={quote.id}
@@ -58,6 +39,17 @@ class QuoteCard extends React.Component {
               onChange= {this.quoteChange}
               />
               <label htmlFor={quote.id} className="css-label m-0"></label>
+          </React.Fragment>
+        );
+      }
+      return '';
+    };
+    return (
+      <div className="col-6">
+         <div className="card d-flex flex-wrap jusitfy-content-center align-content-center p-3">
+            {quote.quote}
+            <p className="text-right m-0">~ {quote.author}</p>
+            { buildCheckbox() }
           </div>
         </div>
     );

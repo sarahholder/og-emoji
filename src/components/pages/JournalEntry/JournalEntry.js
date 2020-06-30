@@ -45,7 +45,7 @@ class JournalEntry extends React.Component {
       likeQuote: '',
     };
     journalData.postEntry(newEntry)
-      .then(() => this.props.history.push('/home'))
+      .then((response) => this.props.history.push(`/singleview/${response.data.name}`))
       .catch((err) => console.error('unable to save entry: ', err));
   }
 

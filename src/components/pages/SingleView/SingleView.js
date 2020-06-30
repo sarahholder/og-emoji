@@ -12,9 +12,10 @@ class SingleView extends React.Component {
     journalEntry: {},
     status: '',
     likeQuote: '',
+    quoteSelected: false,
   }
 
-  componentDidMount() {
+  getCompleteJournal = () => {
     let journal = '';
     const { journalId } = this.props.match.params;
     journalData.getSingleEntry(journalId)
@@ -25,6 +26,7 @@ class SingleView extends React.Component {
         if (journal.likeQuote === '') {
           this.getRandomQuote(statusId);
         } else {
+          this.setState({ quoteSelected: true });
           quoteData.getQuoteByQuoteId(journal.likeQuote)
             .then((resp) => {
               const singleQuote = resp.data;
@@ -43,6 +45,10 @@ class SingleView extends React.Component {
       .catch((err) => console.error('unable to get journal: ', err));
   }
 
+  componentDidMount() {
+    this.getCompleteJournal();
+  }
+
   getRandomQuote = (status) => {
     console.error('this is the status', status);
     quoteData.getRandomQuote(status)
@@ -54,13 +60,15 @@ class SingleView extends React.Component {
   }
 
   render() {
-    const { quotes } = this.state;
-    const { journalEntry } = this.state;
-    const { likeQuote } = this.state;
-    console.error('this is the journal entry', journalEntry);
+    const {
+      quotes,
+      journalEntry,
+      likeQuote,
+      quoteSelected,
+    } = this.state;
 
     const buildQuotes = quotes.map((quote) => (
-      <QuoteCard key={quote.id} quote={quote} likeQuote={likeQuote}/>
+      <QuoteCard key={quote.id} quote={quote} likeQuote={likeQuote} quoteSelected={quoteSelected} getCompleteJournal={this.getCompleteJournal}/>
     ));
 
     return (
