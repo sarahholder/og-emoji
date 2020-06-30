@@ -13,13 +13,12 @@ class Auth extends React.Component {
 
   render() {
     return (
-      <div className="auth">
-        {/* <div>
-        <button className="btn btn-info" onClick={this.loginClickEvent}>Google Login</button>
-        </div> */}
-
+      <div className="auth justify-content-center text-center">
+        <div>
         <img onClick={this.loginClickEvent} className="coverImg" src="https://lh3.googleusercontent.com/pw/ACtC-3dOm1uLde4CbVes9NbXcK2ixekVLr0T5kz-AZ4BBps9q82C7ep1ePb-BXnwkc2velysomzpCu9Nuo6FXXr6zPcI3kN-o9SPHHYAKtkUk6C3GB0QyPBmwkNySubNAYzKUPxjYJxE4f_Z4PDVXFHsExmH=s790-no?authuser=0" alt="compass logo" />
-    </div>
+        </div>
+        <div>Click Logo to Login</div>
+        </div>
     );
   }
 }

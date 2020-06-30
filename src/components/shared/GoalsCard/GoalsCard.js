@@ -65,14 +65,14 @@ class GoalsCard extends React.Component {
 
     return (
       <div className="w-100">
-        <div className="card goalsCard">
-          <div className="card-title p-2 m-0 justify-content-center">
+        <div className="card goalsCard m-1 p-2">
+          <div className="card-title p-1 m-0 justify-content-center">
             <div>
-              <p className="float-left">{goal.date}</p>
+              <p className="float-left p-0 m-0">{goal.date}</p>
               <i className="float-right fas fa-times" onClick={() => removeGoal(goal.id)}></i>
             </div>
           </div>
-            <div className="pb-2 pl-2 pr-2">
+            <div className="pb-2 pl-2 pr-2 text-center">
               <ContentEditable
               innerRef={this.contentEditable}
               html={title}// innerHTML of the editable div
