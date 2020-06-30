@@ -42,6 +42,7 @@ class JournalEntry extends React.Component {
       comments,
       status: thisId,
       uid: authData.getUid(),
+      likeQuote: '',
     };
     journalData.postEntry(newEntry)
       .then(() => this.props.history.push('/home'))

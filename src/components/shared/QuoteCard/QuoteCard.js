@@ -1,6 +1,9 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 import quoteShape from '../../../helpers/propz/quoteShape';
+import journalData from '../../../helpers/data/journalData';
+
 import './QuoteCard.scss';
 
 class QuoteCard extends React.Component {
@@ -13,23 +16,30 @@ class QuoteCard extends React.Component {
   }
 
   quoteChange = (e) => {
-    const { likeQuote1 } = this.state;
-    const { likeQuote2 } = this.state;
-    console.error('this is e', e.target.checked);
-    if (e.target.checked) {
-      if (likeQuote1 === '' && likeQuote2 === '') {
-        this.setState({ likeQuote1: e.target.value });
-      } else if (likeQuote1 === '' && likeQuote2 !== e.target.value) {
-        this.setState({ likeQuote1: e.target.value });
-      } else if (likeQuote2 === '' && likeQuote1 !== e.target.value) {
-        this.setState({ likeQuote2: e.target.value });
-      } else {
-        if (e.target.value === likeQuote1) {
-          this.setState({ likeQuote1: '' });
-        }
-        this.setState({ likeQuote2: '' });
-      }
-    }
+    console.error(e.target.id);
+    const { journalId } = this.props.match.params;
+    const quoteId = e.target.id;
+    journalData.updateLikeQuote(journalId, quoteId)
+      .then(() => console.error('it worked'))
+      .catch((err) => console.error(err));
+
+    // const { likeQuote1 } = this.state;
+    // const { likeQuote2 } = this.state;
+    // console.error('this is e', e.target.checked);
+    // if (e.target.checked) {
+    //   if (likeQuote1 === '' && likeQuote2 === '') {
+    //     this.setState({ likeQuote1: e.target.value });
+    //   } else if (likeQuote1 === '' && likeQuote2 !== e.target.value) {
+    //     this.setState({ likeQuote1: e.target.value });
+    //   } else if (likeQuote2 === '' && likeQuote1 !== e.target.value) {
+    //     this.setState({ likeQuote2: e.target.value });
+    //   } else {
+    //     if (e.target.value === likeQuote1) {
+    //       this.setState({ likeQuote1: '' });
+    //     }
+    //     this.setState({ likeQuote2: '' });
+    //   }
+    // }
   }
 
   render() {
@@ -54,4 +64,4 @@ class QuoteCard extends React.Component {
   }
 }
 
-export default QuoteCard;
+export default withRouter(QuoteCard);

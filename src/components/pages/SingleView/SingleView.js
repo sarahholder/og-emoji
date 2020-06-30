@@ -7,7 +7,6 @@ import statusData from '../../../helpers/data/statusData';
 import './SingleView.scss';
 
 class SingleView extends React.Component {
-
   state = {
     quotes: [],
     journalEntry: {},
@@ -23,7 +22,16 @@ class SingleView extends React.Component {
         journal = response.data;
         const statusId = response.data.status;
         console.error('THIS IS THE ONE', statusId);
-        this.getRandomQuote(statusId);
+        if (journal.likeQuote === '') {
+          this.getRandomQuote(statusId);
+        } else {
+          quoteData.getQuoteByQuoteId(journal.likeQuote)
+            .then((resp) => {
+              const singleQuote = resp.data;
+              singleQuote.id = journal.likeQuote;
+              this.setState({ quotes: [singleQuote] });
+            });
+        }
         statusData.getSingleStatus(statusId)
           .then((status) => {
             journal.statusName = status.data.name;
@@ -48,10 +56,11 @@ class SingleView extends React.Component {
   render() {
     const { quotes } = this.state;
     const { journalEntry } = this.state;
+    const { likeQuote } = this.state;
     console.error('this is the journal entry', journalEntry);
 
     const buildQuotes = quotes.map((quote) => (
-      <QuoteCard key={quote.id} quote={quote} likeQuote={quotes.likeQuote}/>
+      <QuoteCard key={quote.id} quote={quote} likeQuote={likeQuote}/>
     ));
 
     return (
