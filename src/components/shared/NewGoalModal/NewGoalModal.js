@@ -20,17 +20,10 @@ class NewGoalModal extends React.Component {
     modal: true,
     goalTitle: '',
     goalDate: moment().format('MM/DD/YYYY'),
-  }
-
-  getGoals = () => {
-    const uid = authData.getUid();
-    goalsData.getGoalsByUid(uid)
-      .then((goals) => this.setState({ goals }))
-      .catch((err) => console.error('unable to get goals: ', err));
+    goals: [],
   }
 
   toggle = () => {
-    this.getGoals();
     this.setState({ isOpen: !this.state.isOpen });
     this.setState({ modal: !this.state.modal });
     this.props.formClose();
@@ -54,7 +47,7 @@ class NewGoalModal extends React.Component {
       uid: authData.getUid(),
     };
     goalsData.postGoal(newGoal)
-      .then(() => this.getGoals())
+      .then((response) => this.props.history.push('/home'))
       .catch((err) => console.error('Unable to save goal', err));
   }
 
