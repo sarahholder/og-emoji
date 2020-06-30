@@ -42,12 +42,16 @@ class MyNavbar extends React.Component {
       if (authed) {
         return (
         <div>
-        <Navbar color="" light className="d-flex flex-wrap row justify-content-center">
+        <Navbar color="" light expand="sm" className="d-flex flex-wrap row justify-content-center">
           <div tag={RRNavLink} to='/home'><img className="navImg" src="https://lh3.googleusercontent.com/pw/ACtC-3foZHVsERqYPFIbkpqTZpuKs-Ymc9Pw9VLOz5qexhmLXw04IyiJS3f9cJSCJYCgW4dHeqZ17ajsLApTyAqr108-2pifAwyDFveZpMWDhMvv_dPNJQvxfk-UhVUkZJ-9U_TLy6IOSbk1sDfLCI8H97wc=w1500-h600-no?authuser=0" alt="compass logo"/></div>
-          <NavbarToggler onClick={this.toggle}/>
+          <div className="float-right"><NavbarToggler onClick={this.toggle}/>
+        </div>
           <Collapse isOpen={isOpen} navbar>
             <NavItem>
               <NavLink className="logoutButton" onClick={this.logMeOut}>Logout</NavLink>
+            </NavItem>
+            <NavItem>
+      {/* <NavLink tag={RRNavLink} to='/chart'>Chart</NavLink> */}
             </NavItem>
           </Collapse>
         </Navbar>

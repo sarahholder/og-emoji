@@ -4,6 +4,8 @@ import quoteData from '../../../helpers/data/quoteData';
 import QuoteCard from '../../shared/QuoteCard/QuoteCard';
 import statusData from '../../../helpers/data/statusData';
 
+import './SingleView.scss';
+
 class SingleView extends React.Component {
 
   state = {
@@ -53,12 +55,14 @@ class SingleView extends React.Component {
     ));
 
     return (
+            <div className="d-flex flex-wrap justify-content-center">
             <div>
-            <img src={journalEntry.statusEmoji} alt="blah"/>
-            <h1>{journalEntry.date}</h1>
-            <p>{journalEntry.status}</p>
-            <p>Comments: {journalEntry.comments}</p>
-            <p>Import quotes for liked quotes here</p>
+            <img className="emojiIcon" src={journalEntry.statusEmoji} alt={journalEntry.name}/>
+            </div>
+            <div>
+            <h2>{journalEntry.date}</h2>
+            <p>{journalEntry.comments}</p>
+            </div>
            {buildQuotes}
           </div>
     );
