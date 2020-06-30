@@ -8,11 +8,9 @@ const getQuotesByUid = (uid) => new Promise((resolve, reject) => {
     .then((response) => {
       const fbQuotes = response.data;
       const quotes = [];
-      console.error(quotes);
       if (fbQuotes) {
         Object.keys(fbQuotes).forEach((fbId) => {
           fbQuotes[fbId].id = fbId;
-          console.error(fbId);
         });
       }
       resolve(quotes);

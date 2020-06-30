@@ -1,4 +1,5 @@
 import React from 'react';
+import { UncontrolledTooltip } from 'reactstrap';
 import PropTypes from 'prop-types';
 import ContentEditable from 'react-contenteditable';
 import moment from 'moment';
@@ -40,7 +41,6 @@ class GoalsCard extends React.Component {
   }
 
   goalChange = (e) => {
-    console.error(e);
     this.setState({ title: e.target.value });
     this.updateGoal(e);
   }
@@ -69,16 +69,21 @@ class GoalsCard extends React.Component {
           <div className="card-title p-1 m-0 justify-content-center">
             <div>
               <p className="float-left p-0 m-0">{goal.date}</p>
-              <i className="float-right fas fa-times" onClick={() => removeGoal(goal.id)}></i>
+              <i className="float-right fas fa-trash-alt fa-lg" onClick={() => removeGoal(goal.id)}></i>
             </div>
           </div>
             <div className="pb-2 pl-2 pr-2 text-center">
-              <ContentEditable
-              innerRef={this.contentEditable}
-              html={title}// innerHTML of the editable div
-              disabled={false} // use true to disable edition
-              onChange={this.goalChange} // handle innerHTML change
-              />
+              <span style={{ color: 'navy' }} href='#' id='UncontrolledTooltipExample'>
+                <ContentEditable
+                innerRef={this.contentEditable}
+                html={title}// innerHTML of the editable div
+                disabled={false} // use true to disable edition
+                onChange={this.goalChange} // handle innerHTML change
+                />
+              </span>
+      <UncontrolledTooltip className="p-3 goalToolTip" placement='right' target='UncontrolledTooltipExample'>
+      Click on Text to Edit a Goal
+      </UncontrolledTooltip>
           </div>
         </div>
       </div>

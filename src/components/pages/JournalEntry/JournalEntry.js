@@ -56,36 +56,32 @@ class JournalEntry extends React.Component {
     } = this.state;
 
     return (
-      <div>
-        <div>
-          <h2>Journal Entry: </h2>
-          <div className="d-flex flex-wrap align-content-center row journalWidth">
-            <div>
-              <img className="emojiEntry" src={singleStatus.emoji} alt="emoji of feeling"/>
+      <div className="container">
+          <h2 className="p-4 text-left">Journal Entry: </h2>
+          <div>
+          <div className="container d-flex fles-wrap justify-content-center">
+            <div className="col-2">
+                <img className="emojiEntry" src={singleStatus.emoji} alt="emoji of feeling"/>
             </div>
-            <form className="text-left">
+            <form className="text-left col-12">
               <div className="form-group">
-                <label htmlFor="entry-comments"></label>
-                <textarea
-                type="input"
-                className="form-control"
-                id="entry-comments"
-                value={comments}
-                placeholder="enter you thoughts about today here"
-                onChange={this.commentsChange}
-                ></textarea>
+                  <label htmlFor="entry-comments"></label>
+                  <textarea
+                  type="input"
+                  className="form-control"
+                  id="entry-comments"
+                  value={comments}
+                  placeholder="enter you thoughts about today here"
+                  onChange={this.commentsChange}
+                  ></textarea>
               </div>
             </form>
-          </div>
-        </div>
-          <div>
-            <button className="btn btn-primary" onClick={this.saveEntry}>Save</button>
-          </div>
-          <div>
-            <div className="d-flex flex-wrap">
-          </div>
-        </div>
-      </div>
+            </div>
+            <div className="row justify-content-center">
+              <button className="btn btn-info offset-11 col-1" onClick={this.saveEntry}>Save</button>
+            </div>
+            </div>
+            </div>
     );
   }
 }

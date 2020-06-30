@@ -22,7 +22,6 @@ class SingleView extends React.Component {
       .then((response) => {
         journal = response.data;
         const statusId = response.data.status;
-        console.error('THIS IS THE ONE', statusId);
         if (journal.likeQuote === '') {
           this.getRandomQuote(statusId);
         } else {
@@ -37,7 +36,7 @@ class SingleView extends React.Component {
         statusData.getSingleStatus(statusId)
           .then((status) => {
             journal.statusName = status.data.name;
-            journal.statuscolor = status.data.color;
+            journal.statusColor = status.data.color;
             journal.statusEmoji = status.data.emoji;
             this.setState({ journalEntry: journal });
           });
@@ -50,10 +49,8 @@ class SingleView extends React.Component {
   }
 
   getRandomQuote = (status) => {
-    console.error('this is the status', status);
     quoteData.getRandomQuote(status)
       .then((quotes) => {
-        console.error('this is the quotes ', quotes);
         this.setState({ quotes });
       })
       .catch((err) => console.error('Unable to get quotes: ', err));
@@ -72,15 +69,14 @@ class SingleView extends React.Component {
     ));
 
     return (
-            <div className="d-flex flex-wrap justify-content-center">
-            <div>
-            <img className="emojiIcon" src={journalEntry.statusEmoji} alt={journalEntry.name}/>
-            </div>
-            <div>
-            <h2>{journalEntry.date}</h2>
+            <div className="d-flex flex-wrap justify-content-center text-center m-2 pb-2 align-content-middle" style={{ backgroundColor: journalEntry.statusColor }}>
+              <h2 className="m-4 col-12">Previous Journal Entry:</h2>
+              <div className="col-2"><img className="emojiIcon" src={journalEntry.statusEmoji} alt={journalEntry.name}/></div>
+            <div className="col-8 text-left">
+            <h3>{journalEntry.date}</h3>
             <p>{journalEntry.comments}</p>
             </div>
-           {buildQuotes}
+            {buildQuotes}
           </div>
     );
   }
