@@ -25,9 +25,12 @@ const getTodaysEntry = (date) => axios.get(`${baseUrl}/journal/${date}.json`);
 
 const postEntry = (newEntry) => axios.post(`${baseUrl}/journal.json`, newEntry);
 
+const updateLikeQuote = (journalId, quoteId) => axios.patch(`${baseUrl}/journal/${journalId}.json`, { likeQuote: quoteId });
+
 export default {
   getJournalsByUid,
   getSingleEntry,
   postEntry,
   getTodaysEntry,
+  updateLikeQuote,
 };

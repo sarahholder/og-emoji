@@ -42,4 +42,6 @@ const getRandomQuote = (statusId) => new Promise((resolve, reject) => {
     .catch((err) => console.error(err));
 });
 
-export default { getQuotesByUid, getRandomQuote };
+const getQuoteByQuoteId = (quoteId) => axios.get(`${baseUrl}/quotes/${quoteId}.json`);
+
+export default { getQuotesByUid, getRandomQuote, getQuoteByQuoteId };

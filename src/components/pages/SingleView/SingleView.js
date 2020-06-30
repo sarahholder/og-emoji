@@ -4,16 +4,18 @@ import quoteData from '../../../helpers/data/quoteData';
 import QuoteCard from '../../shared/QuoteCard/QuoteCard';
 import statusData from '../../../helpers/data/statusData';
 
-class SingleView extends React.Component {
+import './SingleView.scss';
 
+class SingleView extends React.Component {
   state = {
     quotes: [],
     journalEntry: {},
     status: '',
     likeQuote: '',
+    quoteSelected: false,
   }
 
-  componentDidMount() {
+  getCompleteJournal = () => {
     let journal = '';
     const { journalId } = this.props.match.params;
     journalData.getSingleEntry(journalId)
@@ -21,7 +23,17 @@ class SingleView extends React.Component {
         journal = response.data;
         const statusId = response.data.status;
         console.error('THIS IS THE ONE', statusId);
-        this.getRandomQuote(statusId);
+        if (journal.likeQuote === '') {
+          this.getRandomQuote(statusId);
+        } else {
+          this.setState({ quoteSelected: true });
+          quoteData.getQuoteByQuoteId(journal.likeQuote)
+            .then((resp) => {
+              const singleQuote = resp.data;
+              singleQuote.id = journal.likeQuote;
+              this.setState({ quotes: [singleQuote] });
+            });
+        }
         statusData.getSingleStatus(statusId)
           .then((status) => {
             journal.statusName = status.data.name;
@@ -31,6 +43,10 @@ class SingleView extends React.Component {
           });
       })
       .catch((err) => console.error('unable to get journal: ', err));
+  }
+
+  componentDidMount() {
+    this.getCompleteJournal();
   }
 
   getRandomQuote = (status) => {
@@ -44,21 +60,26 @@ class SingleView extends React.Component {
   }
 
   render() {
-    const { quotes } = this.state;
-    const { journalEntry } = this.state;
-    console.error('this is the journal entry', journalEntry);
+    const {
+      quotes,
+      journalEntry,
+      likeQuote,
+      quoteSelected,
+    } = this.state;
 
     const buildQuotes = quotes.map((quote) => (
-      <QuoteCard key={quote.id} quote={quote} likeQuote={quotes.likeQuote}/>
+      <QuoteCard key={quote.id} quote={quote} likeQuote={likeQuote} quoteSelected={quoteSelected} getCompleteJournal={this.getCompleteJournal}/>
     ));
 
     return (
+            <div className="d-flex flex-wrap justify-content-center">
             <div>
-            <img src={journalEntry.statusEmoji} alt="blah"/>
-            <h1>{journalEntry.date}</h1>
-            <p>{journalEntry.status}</p>
-            <p>Comments: {journalEntry.comments}</p>
-            <p>Import quotes for liked quotes here</p>
+            <img className="emojiIcon" src={journalEntry.statusEmoji} alt={journalEntry.name}/>
+            </div>
+            <div>
+            <h2>{journalEntry.date}</h2>
+            <p>{journalEntry.comments}</p>
+            </div>
            {buildQuotes}
           </div>
     );

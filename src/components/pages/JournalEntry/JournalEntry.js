@@ -42,9 +42,10 @@ class JournalEntry extends React.Component {
       comments,
       status: thisId,
       uid: authData.getUid(),
+      likeQuote: '',
     };
     journalData.postEntry(newEntry)
-      .then(() => this.props.history.push('/home'))
+      .then((response) => this.props.history.push(`/singleview/${response.data.name}`))
       .catch((err) => console.error('unable to save entry: ', err));
   }
 
@@ -58,16 +59,16 @@ class JournalEntry extends React.Component {
       <div>
         <div>
           <h2>Journal Entry: </h2>
-          <div className="d-flex flex-wrap align-content-center row">
+          <div className="d-flex flex-wrap align-content-center row journalWidth">
             <div>
-              <img className="emojiEntry col-1" src={singleStatus.emoji} alt="emoji of feeling"/>
+              <img className="emojiEntry" src={singleStatus.emoji} alt="emoji of feeling"/>
             </div>
             <form className="text-left">
               <div className="form-group">
                 <label htmlFor="entry-comments"></label>
                 <textarea
                 type="input"
-                className="form-control entryComments"
+                className="form-control"
                 id="entry-comments"
                 value={comments}
                 placeholder="enter you thoughts about today here"

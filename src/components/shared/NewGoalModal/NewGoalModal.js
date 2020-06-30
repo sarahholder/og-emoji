@@ -46,7 +46,7 @@ class NewGoalModal extends React.Component {
       uid: authData.getUid(),
     };
     goalsData.postGoal(newGoal)
-      .then(() => window.location.reload())
+      .then(() => this.props.getGoals())
       .catch((err) => console.error('Unable to save goal', err));
   }
 
@@ -76,7 +76,7 @@ class NewGoalModal extends React.Component {
           </div>
           </ModalBody>
           <ModalFooter>
-            <button className="btn btn-success" onClick={this.saveGoal}>Save</button>
+            <button className="btn btn-success" onClick={this.saveGoal} >Save</button>
           </ModalFooter>
         </Modal>
       </div>
