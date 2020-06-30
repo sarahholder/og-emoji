@@ -2,50 +2,107 @@
   "entry1": {
     "date": "01/06/2020",
     "status": "status7",
-    "comments": "First day at NSS. Not sure how it will go. It is scary to step back into a learning environment after so long out of the workforce or educational environment",
+    "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu vitae elementum curabitur vitae nunc sed velit. Et malesuada fames ac turpis egestas sed tempus. Turpis nunc eget lorem dolor sed.",
     "likeQuote": "",
     "uid": "Sqbk5C0SGVYXxSaWZcMuDYvbHy33"
   },
   "entry2": {
     "date": "01/20/2020",
     "status": "status8",
-    "comments": "NSS is going well, but if I have to do another REPO",
+    "comments": "Eum in quis docendi. Vero facilisis philosophia eu per, an detraxit quaestio persecuti eos. Fuisset efficiantur deterruisset eu duo, per cu odio aliquid insolens. Sed audiam ullamcorper ad, ex mei sale viris dicam. Mucius omnesque epicurei cum et, ea virtute periculis has, eum possit eripuit ei.",
     "likeQuote": "",
     "uid": "Sqbk5C0SGVYXxSaWZcMuDYvbHy33"
   },
   "entry3": {
     "date": "02/17/2020",
     "status": "status1",
-    "comments": "Class is going well. I am learning a lot and enjoying class.",
+    "comments": "Justo timeam sensibus sed ex. Autem insolens has id, melius adipisci conclusionemque usu et, maiorum lucilius in est. Ut aliquid minimum explicari vix, no vel illud vidisse. At mel omnes eripuit probatus, vis no wisi omnium expetendis. An dico temporibus eum, mel id veritus detraxit.",
     "likeQuote": "quote3",
     "uid": "Sqbk5C0SGVYXxSaWZcMuDYvbHy33"
   },
   "entry4": {
     "date": "03/11/2020",
-    "status": "status7",
-    "comments": "Received letter from John Wark with NSS stating that we are soon to go remote online learning for classes. Covid is a growing concern for our community",
+    "status": "status2",
+    "comments": "Ut mutat nulla officiis duo, at oblique salutatus cum, ut eruditi maiestatis vis. Duo eu erant labore antiopam. Mel an illum soleat, vix mundi mandamus conclusionemque ei. Option suscipit honestatis at cum, no possit eripuit percipitur vix. Volumus expetendis no eos, te vel mundi utamur. Ea eam oporteat persecuti.",
     "likeQuote": "",
     "uid": "Sqbk5C0SGVYXxSaWZcMuDYvbHy33"
   },
   "entry5": {
     "date": "04/06/2020",
-    "status": "status2",
-    "comments": "Zoe let the cat out of the bag that she will no longer be teaching after our cohort. Had looked forward to keeping up with her at school functions-- instead she is a quiter.",
+    "status": "status3",
+    "comments": "Error impedit at eam, iudico patrioque deterruisset an sed, ex vidisse equidem vivendo qui. Latine maiorum eligendi sit ad. Per error scripta nonumes no, convenire gubergren no mel. Sea graece quaestio accommodare ne, vix modus mentitum at, eu usu lorem dissentiunt. Ne per viris mucius consectetuer. No atomorum platonem contentiones pri.",
     "likeQuote": "quote12",
     "uid": "Sqbk5C0SGVYXxSaWZcMuDYvbHy33"
   },
   "entry6": {
     "date": "01/06/2020",
-    "status": "status3",
+    "status": "status4",
     "comments": "NSS front-end class is about to end that that mean Zoe will be off the hook for being accountable in the evenings.",
     "likeQuote": "quote16",
     "uid": "Sqbk5C0SGVYXxSaWZcMuDYvbHy33"
   },
   "entry7": {
-    "date": "06/20/2020",
-    "status": "status1status",
-    "comments": "Almost done with the first half of NSS.",
+    "date": "03/10/2020",
+    "status": "status5",
+    "comments": "Per ut solum error legere. Wisi veri consectetuer sit an, prompta mediocrem suavitate per et. Tale perfecto sit ex. Vim id diam labores gloriatur. Veniam laudem ponderum in vix, fierent mediocrem mei ut, eam no duis probo praesent. In alienum interesset vim.",
+    "likeQuote": "",
+    "uid": "Sqbk5C0SGVYXxSaWZcMuDYvbHy33"
+  },
+  "entry8": {
+    "date": "04/15/2020",
+    "status": "status6",
+    "comments": "Per ut solum error legere. Wisi veri consectetuer sit an, prompta mediocrem suavitate per et. Tale perfecto sit ex. Vim id diam labores gloriatur. Veniam laudem ponderum in vix, fierent mediocrem mei ut, eam no duis probo praesent. In alienum interesset vim.",
+    "likeQuote": "",
+    "uid": "Sqbk5C0SGVYXxSaWZcMuDYvbHy33"
+  },
+  "entry9": {
+    "date": "05/25/2020",
+    "status": "status7",
+    "comments": "Per ut solum error legere. Wisi veri consectetuer sit an, prompta mediocrem suavitate per et. Tale perfecto sit ex. Vim id diam labores gloriatur. Veniam laudem ponderum in vix, fierent mediocrem mei ut, eam no duis probo praesent. In alienum interesset vim.",
+    "likeQuote": "",
+    "uid": "Sqbk5C0SGVYXxSaWZcMuDYvbHy33"
+  },
+  "entry10": {
+    "date": "06/28/2020",
+    "status": "status1",
+    "comments": "Per ut solum error legere. Wisi veri consectetuer sit an, prompta mediocrem suavitate per et. Tale perfecto sit ex. Vim id diam labores gloriatur. Veniam laudem ponderum in vix, fierent mediocrem mei ut, eam no duis probo praesent. In alienum interesset vim.",
+    "likeQuote": "",
+    "uid": "Sqbk5C0SGVYXxSaWZcMuDYvbHy33"
+  },
+  "entry11": {
+    "date": "02/02/2020",
+    "status": "status8",
+    "comments": "Per ut solum error legere. Wisi veri consectetuer sit an, prompta mediocrem suavitate per et. Tale perfecto sit ex. Vim id diam labores gloriatur. Veniam laudem ponderum in vix, fierent mediocrem mei ut, eam no duis probo praesent. In alienum interesset vim.",
+    "likeQuote": "",
+    "uid": "Sqbk5C0SGVYXxSaWZcMuDYvbHy33"
+  },
+  "entry12": {
+    "date": "03/30/2020",
+    "status": "status1",
+    "comments": "Per ut solum error legere. Wisi veri consectetuer sit an, prompta mediocrem suavitate per et. Tale perfecto sit ex. Vim id diam labores gloriatur. Veniam laudem ponderum in vix, fierent mediocrem mei ut, eam no duis probo praesent. In alienum interesset vim.",
+    "likeQuote": "",
+    "uid": "Sqbk5C0SGVYXxSaWZcMuDYvbHy33"
+  },
+  "entry13": {
+    "date": "06/01/2020",
+    "status": "status7",
+    "comments": "Per ut solum error legere. Wisi veri consectetuer sit an, prompta mediocrem suavitate per et. Tale perfecto sit ex. Vim id diam labores gloriatur. Veniam laudem ponderum in vix, fierent mediocrem mei ut, eam no duis probo praesent. In alienum interesset vim.",
+    "likeQuote": "",
+    "uid": "Sqbk5C0SGVYXxSaWZcMuDYvbHy33"
+  },
+  "entry14": {
+    "date": "05/05/2020",
+    "status": "status8",
+    "comments": "Per ut solum error legere. Wisi veri consectetuer sit an, prompta mediocrem suavitate per et. Tale perfecto sit ex. Vim id diam labores gloriatur. Veniam laudem ponderum in vix, fierent mediocrem mei ut, eam no duis probo praesent. In alienum interesset vim.",
+    "likeQuote": "",
+    "uid": "Sqbk5C0SGVYXxSaWZcMuDYvbHy33"
+  },
+  "entry15": {
+    "date": "01/22/2020",
+    "status": "status1",
+    "comments": "Per ut solum error legere. Wisi veri consectetuer sit an, prompta mediocrem suavitate per et. Tale perfecto sit ex. Vim id diam labores gloriatur. Veniam laudem ponderum in vix, fierent mediocrem mei ut, eam no duis probo praesent. In alienum interesset vim.",
     "likeQuote": "",
     "uid": "12345"
   }
+
 }

@@ -16,12 +16,12 @@ class statusCard extends React.Component {
       <div>
         <div className="statusCard" style={{ backgroundColor: status.color }}>
           <div className="card-body p-0">
-        <Link className="btn btn-info imageLink" status={status} to={singleLink}>
+        <Link className="btn imageLink" status={status} to={singleLink}>
           <div>
             <img className="statusImg img-card-top" src={status.emoji} alt={status.name}/>
           </div>
           <div>
-            {status.name}
+            <h5>{status.name}</h5>
           </div>
         </Link>
           </div>

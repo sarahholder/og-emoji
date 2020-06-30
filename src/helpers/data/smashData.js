@@ -16,7 +16,6 @@ const getJournalsWithStatusId = (uid) => new Promise((resolve, reject) => {
           completeJournal.push(journalCopy);
           resolve(completeJournal);
         });
-        console.error(completeJournal);
       });
     })
     .catch((err) => reject(err));

@@ -16,7 +16,6 @@ class QuoteCard extends React.Component {
   }
 
   quoteChange = (e) => {
-    console.error(e.target.id);
     const { journalId } = this.props.match.params;
     const quoteId = e.target.id;
     journalData.updateLikeQuote(journalId, quoteId)

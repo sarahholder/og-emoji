@@ -14,7 +14,7 @@ h1{
 h2{
     font-family: 'Homemade Apple', cursive;
 }
-h3{
+h3, h4, h5{
     font-family: 'Raleway', sans-serif;
 }
 p{
@@ -30,6 +30,24 @@ p{
 .auth{
     vertical-align: middle;   
     color: white;
+}
+
+.list-group-item.active{
+    color: black;
+    border-color: gray;
+    border-radius: 0;
+}
+
+.smallEmoji{
+    max-height: 30px;
+    max-width: auto;
+}
+
+
+.titleBorder{
+    border-top: 10px solid rgba(50, 184, 202, 0.377);
+    margin-top: 20px; 
+    padding-top: 20px;
 }
 // font-family: 'Homemade Apple', cursive;
 // font-family: 'Lato', sans-serif;

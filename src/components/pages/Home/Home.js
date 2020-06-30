@@ -105,15 +105,15 @@ class Home extends React.Component {
       </div>
     <div className="col-md-5 d-flex flex-wrap justify-content-center m-2">
       <h2 className="m-4">Goals :</h2>
-      <div className="card-group goalsSection">
+      <div className="card-group goalsSection d-flex flex-wrap justify-content-center text-center">
           {buildGoalCards}
-          {goals.length < 3 ? <button className="btn btn-success" onClick={() => this.setState({ formOpen: true }) }>Add Goal</button> : ''}
+          {goals.length < 3 ? <button className="btn btn-info"><i className="fas fa-plus fa-2x" onClick={() => this.setState({ formOpen: true }) }></i></button> : ''}
           { formOpen ? <NewGoalModal formClose={this.formClose} goal={goal} /> : '' }
       </div>
     </div>
     </div>
-    <div className="mt-2">
-    <h2 className="m-4">Previous Journal Entries :</h2>
+    <div className="mt-5">
+    <h2 className="titleBorder">Previous Journal Entries :</h2>
     <div className="d-flex flex-wrap justify-content-center">
       <div className="card-group d-flex flex-wrap justify-content-center">
         {buildJournalCards}
