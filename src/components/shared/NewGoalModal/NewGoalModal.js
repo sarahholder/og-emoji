@@ -20,6 +20,7 @@ class NewGoalModal extends React.Component {
     modal: true,
     goalTitle: '',
     goalDate: moment().format('MM/DD/YYYY'),
+    goals: [],
   }
 
   toggle = () => {
@@ -46,7 +47,7 @@ class NewGoalModal extends React.Component {
       uid: authData.getUid(),
     };
     goalsData.postGoal(newGoal)
-      .then(() => this.props.getGoals())
+      .then((response) => this.props.history.push('/home'))
       .catch((err) => console.error('Unable to save goal', err));
   }
 

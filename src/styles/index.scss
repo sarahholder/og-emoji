@@ -5,7 +5,32 @@
 body { 
     background-image: url(https://images.unsplash.com/photo-1474540412665-1cdae210ae6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1524&q=80);
     background-position: cover;
+    font-family: 'Lato', sans-serif;
 }
+
+h1{
+    font-family: 'Raleway', sans-serif;
+}
+h2{
+    font-family: 'Homemade Apple', cursive;
+}
+h3{
+    font-family: 'Raleway', sans-serif;
+}
+p{
+    font-family: 'Lato', sans-serif; 
+}
+
 .coverImg {
-    width: 100vh;
+    width: 80%;
+    text-align: center;
+    margin-top: 5%;
+    
 }
+.auth{
+    vertical-align: middle;   
+    color: white;
+}
+// font-family: 'Homemade Apple', cursive;
+// font-family: 'Lato', sans-serif;
+// font-family: 'Raleway', sans-serif;

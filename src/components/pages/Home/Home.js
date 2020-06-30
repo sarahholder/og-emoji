@@ -94,17 +94,17 @@ class Home extends React.Component {
   <div>
     <div className="justify-content-center">
     </div>
-    <div className="d-flex flex-wrap justify-content-center">
+    <div className="d-flex flex-wrap justify-content-center align-content-middle m-2">
       <div className="col-md-6">
-        <h2>Pick Emoji:</h2>
-        <div className="row justify-content-center">
+        <h2 className="m-4">How are you feeling today?</h2>
+        <div className="row">
           <div className="card-group d-flex flex-wrap justify-content-center emojiSection">
           {buildStatusCards}
           </div>
         </div>
       </div>
-    <div className="col-md-6 d-flex flex-wrap justify-content-center ">
-      <h2>Track up to 3 goals:</h2>
+    <div className="col-md-5 d-flex flex-wrap justify-content-center m-2">
+      <h2 className="m-4">Goals :</h2>
       <div className="card-group goalsSection">
           {buildGoalCards}
           {goals.length < 3 ? <button className="btn btn-success" onClick={() => this.setState({ formOpen: true }) }>Add Goal</button> : ''}
@@ -113,7 +113,7 @@ class Home extends React.Component {
     </div>
     </div>
     <div className="mt-2">
-    <h2>Previous Journal Entries:</h2>
+    <h2 className="m-4">Previous Journal Entries :</h2>
     <div className="d-flex flex-wrap justify-content-center">
       <div className="card-group d-flex flex-wrap justify-content-center">
         {buildJournalCards}
