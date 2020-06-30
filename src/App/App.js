@@ -16,6 +16,7 @@ import Home from '../components/pages/Home/Home';
 import JournalEntry from '../components/pages/JournalEntry/JournalEntry';
 import MyNavbar from '../components/shared/MyNavbar/MyNavbar';
 import SingleView from '../components/pages/SingleView/SingleView';
+import Chart from '../components/pages/Chart/Chart';
 
 import fbconnection from '../helpers/data/connection';
 
@@ -67,6 +68,7 @@ class App extends React.Component {
                   <PrivateRoute path='/home' component={Home} authed={authed} />
                   <PrivateRoute path='/journalentry/:statusId' component={JournalEntry} authed={authed} />
                   <PrivateRoute path='/singleview/:journalId' component={SingleView} authed={authed} />
+                  <PrivateRoute path='/chart' component={Chart} authed={authed} />
                   <PublicRoute path='/auth' component={Auth} authed={authed} />
                   <Redirect from="*" to="/home"/>
                 </Switch>
